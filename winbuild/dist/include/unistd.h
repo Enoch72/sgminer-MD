@@ -1,4 +1,5 @@
 #pragma once
+#include <stdio.h>
 
 /* Values for the second argument to access.
    These may be OR'd together.  */
@@ -22,7 +23,9 @@
 #define write _write
 #define close _close
 #define read _read
-#define snprintf _snprintf
+#ifndef WIN32
+//#define snprintf _snprintf
+#endif
 
 #define STDIN_FILENO  0
 #define STDOUT_FILENO 1

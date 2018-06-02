@@ -1,0 +1,4 @@
+# CMake generation dependency list for this directory.
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/lib/CMakeLists.txt
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/lib/curl_config.h.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/lib/Makefile.inc.cmake

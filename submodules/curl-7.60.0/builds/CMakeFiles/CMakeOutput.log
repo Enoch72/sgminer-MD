@@ -1,0 +1,2202 @@
+The system is: Windows - 6.1.7601 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:17.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\3.9.2\CompilerIdC\CompilerIdC.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "Debug\".
+  Creazione directory "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Creazione di "Debug\CompilerIdC.tlog\unsuccessfulbuild". � stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /nologo /W0 /WX- /diagnostics:classic /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\3.9.2\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\Hostx86\x86\cl.exe
+FinalizeBuildStatus:
+  Eliminazione del file "Debug\CompilerIdC.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\3.9.2\CompilerIdC\CompilerIdC.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.52
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/3.9.2/CompilerIdC/CompilerIdC.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_db45f.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:19.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_db45f.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_db45f.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_db45f.dir\Debug\cmTC_db45f.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_db45f.dir\Debug\cmTC_db45f.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_db45f.dir\Debug\\" /Fd"cmTC_db45f.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\testCCompiler.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_db45f.dir\Debug\\" /Fd"cmTC_db45f.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\testCCompiler.c"
+  testCCompiler.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_db45f.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_db45f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_db45f.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_db45f.dir\Debug\testCCompiler.obj
+  cmTC_db45f.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_db45f.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_db45f.dir\Debug\cmTC_db45f.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_db45f.dir\Debug\cmTC_db45f.tlog\cmTC_db45f.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_db45f.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.66
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_67134.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:21.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_67134.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_67134.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_67134.dir\Debug\cmTC_67134.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_67134.dir\Debug\cmTC_67134.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67134.dir\Debug\\" /Fd"cmTC_67134.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67134.dir\Debug\\" /Fd"cmTC_67134.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CMakeCCompilerABI.c"
+  CMakeCCompilerABI.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_67134.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_67134.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_67134.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_67134.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_67134.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_67134.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_67134.dir\Debug\cmTC_67134.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_67134.dir\Debug\cmTC_67134.tlog\cmTC_67134.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_67134.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.34
+
+
+Determining if the function getch exists in the ws2_32; passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_28059.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:25.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_28059.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_28059.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_28059.dir\Debug\cmTC_28059.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_28059.dir\Debug\cmTC_28059.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=getch /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_28059.dir\Debug\\" /Fd"cmTC_28059.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=getch /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_28059.dir\Debug\\" /Fd"cmTC_28059.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_28059.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_28059.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_28059.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_28059.dir\Debug\CheckFunctionExists.obj
+  cmTC_28059.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_28059.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_28059.dir\Debug\cmTC_28059.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_28059.dir\Debug\cmTC_28059.tlog\cmTC_28059.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_28059.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.33
+
+
+Determining if the function getch exists in the winmm;ws2_32 passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_a1609.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:27.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_a1609.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_a1609.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_a1609.dir\Debug\cmTC_a1609.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_a1609.dir\Debug\cmTC_a1609.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=getch /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a1609.dir\Debug\\" /Fd"cmTC_a1609.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=getch /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a1609.dir\Debug\\" /Fd"cmTC_a1609.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_a1609.exe" /INCREMENTAL /NOLOGO winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_a1609.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_a1609.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_a1609.dir\Debug\CheckFunctionExists.obj
+  cmTC_a1609.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_a1609.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_a1609.dir\Debug\cmTC_a1609.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_a1609.dir\Debug\cmTC_a1609.tlog\cmTC_a1609.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_a1609.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.32
+
+
+Determining if the function cldap_open exists in the wldap32;winmm;ws2_32;advapi32 passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_b4e56.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:28.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_b4e56.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_b4e56.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_b4e56.dir\Debug\cmTC_b4e56.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_b4e56.dir\Debug\cmTC_b4e56.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=cldap_open /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b4e56.dir\Debug\\" /Fd"cmTC_b4e56.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=cldap_open /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b4e56.dir\Debug\\" /Fd"cmTC_b4e56.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.9\Modules\CheckFunctionExists.c"
+  CheckFunctionExists.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_b4e56.exe" /INCREMENTAL /NOLOGO wldap32.lib winmm.lib ws2_32.lib advapi32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_b4e56.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_b4e56.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_b4e56.dir\Debug\CheckFunctionExists.obj
+  cmTC_b4e56.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_b4e56.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_b4e56.dir\Debug\cmTC_b4e56.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_b4e56.dir\Debug\cmTC_b4e56.tlog\cmTC_b4e56.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_b4e56.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.33
+
+
+Determining if files ;windows.h exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_d47f1.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:38.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_d47f1.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_d47f1.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_d47f1.dir\Debug\cmTC_d47f1.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_d47f1.dir\Debug\cmTC_d47f1.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d47f1.dir\Debug\\" /Fd"cmTC_d47f1.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d47f1.dir\Debug\\" /Fd"cmTC_d47f1.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_d47f1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_d47f1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_d47f1.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_d47f1.dir\Debug\CheckIncludeFiles.obj
+  cmTC_d47f1.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_d47f1.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_d47f1.dir\Debug\cmTC_d47f1.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_d47f1.dir\Debug\cmTC_d47f1.tlog\cmTC_d47f1.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_d47f1.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.06
+
+
+Determining if files windows.h;winsock.h exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_6df2d.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:40.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_6df2d.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_6df2d.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_6df2d.dir\Debug\cmTC_6df2d.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_6df2d.dir\Debug\cmTC_6df2d.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6df2d.dir\Debug\\" /Fd"cmTC_6df2d.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6df2d.dir\Debug\\" /Fd"cmTC_6df2d.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_6df2d.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_6df2d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_6df2d.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_6df2d.dir\Debug\CheckIncludeFiles.obj
+  cmTC_6df2d.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_6df2d.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_6df2d.dir\Debug\cmTC_6df2d.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_6df2d.dir\Debug\cmTC_6df2d.tlog\cmTC_6df2d.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_6df2d.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.06
+
+
+Determining if files windows.h;winsock.h;ws2tcpip.h exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_3723f.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:43.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_3723f.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_3723f.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_3723f.dir\Debug\cmTC_3723f.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_3723f.dir\Debug\cmTC_3723f.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3723f.dir\Debug\\" /Fd"cmTC_3723f.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3723f.dir\Debug\\" /Fd"cmTC_3723f.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_3723f.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_3723f.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_3723f.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_3723f.dir\Debug\CheckIncludeFiles.obj
+  cmTC_3723f.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_3723f.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_3723f.dir\Debug\cmTC_3723f.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_3723f.dir\Debug\cmTC_3723f.tlog\cmTC_3723f.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_3723f.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.05
+
+
+Determining if files windows.h;winsock.h;ws2tcpip.h;winsock2.h exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_aa677.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:45.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_aa677.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_aa677.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_aa677.dir\Debug\cmTC_aa677.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_aa677.dir\Debug\cmTC_aa677.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_aa677.dir\Debug\\" /Fd"cmTC_aa677.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_aa677.dir\Debug\\" /Fd"cmTC_aa677.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_aa677.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_aa677.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_aa677.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_aa677.dir\Debug\CheckIncludeFiles.obj
+  cmTC_aa677.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_aa677.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_aa677.dir\Debug\cmTC_aa677.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_aa677.dir\Debug\cmTC_aa677.tlog\cmTC_aa677.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_aa677.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.06
+
+
+Determining if files windows.h;winsock.h;ws2tcpip.h;winsock2.h;stdio.h exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_745fb.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:30:48.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_745fb.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_745fb.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_745fb.dir\Debug\cmTC_745fb.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_745fb.dir\Debug\cmTC_745fb.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_745fb.dir\Debug\\" /Fd"cmTC_745fb.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_745fb.dir\Debug\\" /Fd"cmTC_745fb.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_745fb.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_745fb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_745fb.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_745fb.dir\Debug\CheckIncludeFiles.obj
+  cmTC_745fb.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_745fb.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_745fb.dir\Debug\cmTC_745fb.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_745fb.dir\Debug\cmTC_745fb.tlog\cmTC_745fb.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_745fb.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.12
+
+
+Determining if files windows.h;winsock.h;ws2tcpip.h;winsock2.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_9ff62.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:05.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_9ff62.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_9ff62.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_9ff62.dir\Debug\cmTC_9ff62.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_9ff62.dir\Debug\cmTC_9ff62.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9ff62.dir\Debug\\" /Fd"cmTC_9ff62.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9ff62.dir\Debug\\" /Fd"cmTC_9ff62.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_9ff62.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_9ff62.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_9ff62.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_9ff62.dir\Debug\CheckIncludeFiles.obj
+  cmTC_9ff62.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_9ff62.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_9ff62.dir\Debug\cmTC_9ff62.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_9ff62.dir\Debug\cmTC_9ff62.tlog\cmTC_9ff62.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_9ff62.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.10
+
+
+Determining if files windows.h;winsock.h;ws2tcpip.h;winsock2.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_9ba7a.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:13.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_9ba7a.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_9ba7a.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_9ba7a.dir\Debug\cmTC_9ba7a.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_9ba7a.dir\Debug\cmTC_9ba7a.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9ba7a.dir\Debug\\" /Fd"cmTC_9ba7a.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9ba7a.dir\Debug\\" /Fd"cmTC_9ba7a.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_9ba7a.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_9ba7a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_9ba7a.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_9ba7a.dir\Debug\CheckIncludeFiles.obj
+  cmTC_9ba7a.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_9ba7a.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_9ba7a.dir\Debug\cmTC_9ba7a.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_9ba7a.dir\Debug\cmTC_9ba7a.tlog\cmTC_9ba7a.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_9ba7a.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.11
+
+
+Determining if files windows.h;winsock.h;ws2tcpip.h;winsock2.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_9ca51.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:24.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_9ca51.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_9ca51.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_9ca51.dir\Debug\cmTC_9ca51.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_9ca51.dir\Debug\cmTC_9ca51.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9ca51.dir\Debug\\" /Fd"cmTC_9ca51.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9ca51.dir\Debug\\" /Fd"cmTC_9ca51.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_9ca51.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_9ca51.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_9ca51.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_9ca51.dir\Debug\CheckIncludeFiles.obj
+  cmTC_9ca51.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_9ca51.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_9ca51.dir\Debug\cmTC_9ca51.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_9ca51.dir\Debug\cmTC_9ca51.tlog\cmTC_9ca51.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_9ca51.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.11
+
+
+Determining if files windows.h;winsock.h;ws2tcpip.h;winsock2.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_71552.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:37.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_71552.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_71552.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_71552.dir\Debug\cmTC_71552.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_71552.dir\Debug\cmTC_71552.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_71552.dir\Debug\\" /Fd"cmTC_71552.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_71552.dir\Debug\\" /Fd"cmTC_71552.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_71552.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_71552.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_71552.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_71552.dir\Debug\CheckIncludeFiles.obj
+  cmTC_71552.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_71552.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_71552.dir\Debug\cmTC_71552.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_71552.dir\Debug\cmTC_71552.tlog\cmTC_71552.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_71552.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.14
+
+
+Determining if files windows.h;winsock.h;ws2tcpip.h;winsock2.h;stdio.h;sys/stat.h;sys/types.h;sys/utime.h;assert.h;errno.h;fcntl.h;io.h;locale.h;setjmp.h;signal.h;stdbool.h;stdio.h;stdlib.h;string.h;time.h;process.h;stddef.h exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_64d61.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:42.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_64d61.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_64d61.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_64d61.dir\Debug\cmTC_64d61.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_64d61.dir\Debug\cmTC_64d61.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_64d61.dir\Debug\\" /Fd"cmTC_64d61.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_64d61.dir\Debug\\" /Fd"cmTC_64d61.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckIncludeFiles.c"
+  CheckIncludeFiles.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_64d61.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_64d61.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_64d61.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_64d61.dir\Debug\CheckIncludeFiles.obj
+  cmTC_64d61.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_64d61.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_64d61.dir\Debug\cmTC_64d61.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_64d61.dir\Debug\cmTC_64d61.tlog\cmTC_64d61.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_64d61.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.12
+
+
+Determining size of size_t passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_c9ce9.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:46.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_c9ce9.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_c9ce9.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_c9ce9.dir\Debug\cmTC_c9ce9.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_c9ce9.dir\Debug\cmTC_c9ce9.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c9ce9.dir\Debug\\" /Fd"cmTC_c9ce9.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_SIZE_T.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c9ce9.dir\Debug\\" /Fd"cmTC_c9ce9.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_SIZE_T.c"
+  SIZEOF_SIZE_T.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_c9ce9.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_c9ce9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_c9ce9.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_c9ce9.dir\Debug\SIZEOF_SIZE_T.obj
+  cmTC_c9ce9.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_c9ce9.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_c9ce9.dir\Debug\cmTC_c9ce9.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_c9ce9.dir\Debug\cmTC_c9ce9.tlog\cmTC_c9ce9.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_c9ce9.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.28
+
+
+Determining size of long long passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_da184.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:49.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_da184.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_da184.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_da184.dir\Debug\cmTC_da184.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_da184.dir\Debug\cmTC_da184.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_da184.dir\Debug\\" /Fd"cmTC_da184.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_da184.dir\Debug\\" /Fd"cmTC_da184.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_LONG_LONG.c"
+  SIZEOF_LONG_LONG.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_da184.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_da184.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_da184.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_da184.dir\Debug\SIZEOF_LONG_LONG.obj
+  cmTC_da184.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_da184.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_da184.dir\Debug\cmTC_da184.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_da184.dir\Debug\cmTC_da184.tlog\cmTC_da184.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_da184.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.28
+
+
+Determining size of long passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_1601b.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:51.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_1601b.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_1601b.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_1601b.dir\Debug\cmTC_1601b.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_1601b.dir\Debug\cmTC_1601b.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1601b.dir\Debug\\" /Fd"cmTC_1601b.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1601b.dir\Debug\\" /Fd"cmTC_1601b.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_LONG.c"
+  SIZEOF_LONG.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_1601b.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_1601b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_1601b.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_1601b.dir\Debug\SIZEOF_LONG.obj
+  cmTC_1601b.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_1601b.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_1601b.dir\Debug\cmTC_1601b.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_1601b.dir\Debug\cmTC_1601b.tlog\cmTC_1601b.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_1601b.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.28
+
+
+Determining size of short passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_05906.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:53.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_05906.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_05906.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_05906.dir\Debug\cmTC_05906.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_05906.dir\Debug\cmTC_05906.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_05906.dir\Debug\\" /Fd"cmTC_05906.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_SHORT.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_05906.dir\Debug\\" /Fd"cmTC_05906.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_SHORT.c"
+  SIZEOF_SHORT.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_05906.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_05906.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_05906.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_05906.dir\Debug\SIZEOF_SHORT.obj
+  cmTC_05906.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_05906.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_05906.dir\Debug\cmTC_05906.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_05906.dir\Debug\cmTC_05906.tlog\cmTC_05906.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_05906.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.25
+
+
+Determining size of int passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_7da7b.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:54.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_7da7b.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_7da7b.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_7da7b.dir\Debug\cmTC_7da7b.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_7da7b.dir\Debug\cmTC_7da7b.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7da7b.dir\Debug\\" /Fd"cmTC_7da7b.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_INT.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7da7b.dir\Debug\\" /Fd"cmTC_7da7b.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_INT.c"
+  SIZEOF_INT.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_7da7b.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_7da7b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_7da7b.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_7da7b.dir\Debug\SIZEOF_INT.obj
+  cmTC_7da7b.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_7da7b.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_7da7b.dir\Debug\cmTC_7da7b.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_7da7b.dir\Debug\cmTC_7da7b.tlog\cmTC_7da7b.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_7da7b.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.43
+
+
+Determining size of __int64 passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_b013a.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:56.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_b013a.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_b013a.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_b013a.dir\Debug\cmTC_b013a.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_b013a.dir\Debug\cmTC_b013a.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b013a.dir\Debug\\" /Fd"cmTC_b013a.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF___INT64.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b013a.dir\Debug\\" /Fd"cmTC_b013a.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF___INT64.c"
+  SIZEOF___INT64.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_b013a.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_b013a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_b013a.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_b013a.dir\Debug\SIZEOF___INT64.obj
+  cmTC_b013a.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_b013a.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_b013a.dir\Debug\cmTC_b013a.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_b013a.dir\Debug\cmTC_b013a.tlog\cmTC_b013a.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_b013a.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.31
+
+
+Determining size of time_t passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_84f0e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:31:58.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_84f0e.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_84f0e.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_84f0e.dir\Debug\cmTC_84f0e.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_84f0e.dir\Debug\cmTC_84f0e.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84f0e.dir\Debug\\" /Fd"cmTC_84f0e.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_TIME_T.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84f0e.dir\Debug\\" /Fd"cmTC_84f0e.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_TIME_T.c"
+  SIZEOF_TIME_T.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_84f0e.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_84f0e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_84f0e.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_84f0e.dir\Debug\SIZEOF_TIME_T.obj
+  cmTC_84f0e.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_84f0e.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_84f0e.dir\Debug\cmTC_84f0e.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_84f0e.dir\Debug\cmTC_84f0e.tlog\cmTC_84f0e.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_84f0e.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.28
+
+
+Determining if the gethostbyname exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_1fb81.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:32:06.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_1fb81.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_1fb81.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_1fb81.dir\Debug\cmTC_1fb81.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_1fb81.dir\Debug\cmTC_1fb81.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1fb81.dir\Debug\\" /Fd"cmTC_1fb81.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1fb81.dir\Debug\\" /Fd"cmTC_1fb81.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+d:\miners\sgminer-mad\submodules\curl-7.60.0\builds\cmakefiles\cmaketmp\checksymbolexists.c(31): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings [D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_1fb81.vcxproj]
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\um\winsock2.h(2218): note: vedere la dichiarazione di 'gethostbyname'
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_1fb81.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_1fb81.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_1fb81.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_1fb81.dir\Debug\CheckSymbolExists.obj
+  cmTC_1fb81.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_1fb81.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_1fb81.dir\Debug\cmTC_1fb81.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_1fb81.dir\Debug\cmTC_1fb81.tlog\cmTC_1fb81.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_1fb81.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+
+"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_1fb81.vcxproj" (destinazione predefinita) (1) ->
+(destinazione: ClCompile) -> 
+  d:\miners\sgminer-mad\submodules\curl-7.60.0\builds\cmakefiles\cmaketmp\checksymbolexists.c(31): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings [D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_1fb81.vcxproj]
+
+    Avvisi: 1
+    Errori: 0
+
+Tempo trascorso 00:00:02.16
+
+File D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <winsock.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gethostbyname
+  return ((int*)(&gethostbyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strtoll exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_70e29.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:32:08.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_70e29.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_70e29.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_70e29.dir\Debug\cmTC_70e29.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_70e29.dir\Debug\cmTC_70e29.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_70e29.dir\Debug\\" /Fd"cmTC_70e29.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_70e29.dir\Debug\\" /Fd"cmTC_70e29.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_70e29.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_70e29.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_70e29.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_70e29.dir\Debug\CheckSymbolExists.obj
+  cmTC_70e29.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_70e29.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_70e29.dir\Debug\cmTC_70e29.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_70e29.dir\Debug\cmTC_70e29.tlog\cmTC_70e29.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_70e29.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.16
+
+File D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <winsock.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strtoll
+  return ((int*)(&strtoll))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the _strtoi64 exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_7d5d2.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:32:11.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_7d5d2.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_7d5d2.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_7d5d2.dir\Debug\cmTC_7d5d2.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_7d5d2.dir\Debug\cmTC_7d5d2.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7d5d2.dir\Debug\\" /Fd"cmTC_7d5d2.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7d5d2.dir\Debug\\" /Fd"cmTC_7d5d2.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_7d5d2.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_7d5d2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_7d5d2.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_7d5d2.dir\Debug\CheckSymbolExists.obj
+  cmTC_7d5d2.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_7d5d2.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_7d5d2.dir\Debug\cmTC_7d5d2.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_7d5d2.dir\Debug\cmTC_7d5d2.tlog\cmTC_7d5d2.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_7d5d2.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.15
+
+File D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <winsock.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strtoi64
+  return ((int*)(&_strtoi64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the freeaddrinfo exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_ca73b.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:32:20.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_ca73b.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_ca73b.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_ca73b.dir\Debug\cmTC_ca73b.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_ca73b.dir\Debug\cmTC_ca73b.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ca73b.dir\Debug\\" /Fd"cmTC_ca73b.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ca73b.dir\Debug\\" /Fd"cmTC_ca73b.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_ca73b.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_ca73b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_ca73b.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ca73b.dir\Debug\CheckSymbolExists.obj
+  cmTC_ca73b.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_ca73b.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_ca73b.dir\Debug\cmTC_ca73b.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_ca73b.dir\Debug\cmTC_ca73b.tlog\cmTC_ca73b.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_ca73b.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.15
+
+File D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <winsock.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef freeaddrinfo
+  return ((int*)(&freeaddrinfo))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getprotobyname exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_92dc5.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:32:29.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_92dc5.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_92dc5.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_92dc5.dir\Debug\cmTC_92dc5.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_92dc5.dir\Debug\cmTC_92dc5.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_92dc5.dir\Debug\\" /Fd"cmTC_92dc5.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_92dc5.dir\Debug\\" /Fd"cmTC_92dc5.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_92dc5.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_92dc5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_92dc5.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_92dc5.dir\Debug\CheckSymbolExists.obj
+  cmTC_92dc5.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_92dc5.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_92dc5.dir\Debug\cmTC_92dc5.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_92dc5.dir\Debug\cmTC_92dc5.tlog\cmTC_92dc5.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_92dc5.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.25
+
+File D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <winsock.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getprotobyname
+  return ((int*)(&getprotobyname))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the setlocale exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_fac70.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:32:34.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_fac70.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_fac70.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_fac70.dir\Debug\cmTC_fac70.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_fac70.dir\Debug\cmTC_fac70.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fac70.dir\Debug\\" /Fd"cmTC_fac70.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_fac70.dir\Debug\\" /Fd"cmTC_fac70.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_fac70.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_fac70.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_fac70.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_fac70.dir\Debug\CheckSymbolExists.obj
+  cmTC_fac70.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_fac70.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_fac70.dir\Debug\cmTC_fac70.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_fac70.dir\Debug\cmTC_fac70.tlog\cmTC_fac70.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_fac70.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.12
+
+File D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <winsock.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setlocale
+  return ((int*)(&setlocale))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the setmode exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_439f8.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:32:36.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_439f8.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_439f8.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_439f8.dir\Debug\cmTC_439f8.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_439f8.dir\Debug\cmTC_439f8.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_439f8.dir\Debug\\" /Fd"cmTC_439f8.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_439f8.dir\Debug\\" /Fd"cmTC_439f8.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+d:\miners\sgminer-mad\submodules\curl-7.60.0\builds\cmakefiles\cmaketmp\checksymbolexists.c(31): warning C4996: 'setmode': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _setmode. See online help for details. [D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_439f8.vcxproj]
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\corecrt_io.h(530): note: vedere la dichiarazione di 'setmode'
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_439f8.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_439f8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_439f8.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_439f8.dir\Debug\CheckSymbolExists.obj
+  cmTC_439f8.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_439f8.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_439f8.dir\Debug\cmTC_439f8.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_439f8.dir\Debug\cmTC_439f8.tlog\cmTC_439f8.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_439f8.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+
+"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_439f8.vcxproj" (destinazione predefinita) (1) ->
+(destinazione: ClCompile) -> 
+  d:\miners\sgminer-mad\submodules\curl-7.60.0\builds\cmakefiles\cmaketmp\checksymbolexists.c(31): warning C4996: 'setmode': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _setmode. See online help for details. [D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_439f8.vcxproj]
+
+    Avvisi: 1
+    Errori: 0
+
+Tempo trascorso 00:00:02.12
+
+File D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <winsock.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setmode
+  return ((int*)(&setmode))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the setsockopt exist passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_12b54.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:32:45.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_12b54.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_12b54.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_12b54.dir\Debug\cmTC_12b54.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_12b54.dir\Debug\cmTC_12b54.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_12b54.dir\Debug\\" /Fd"cmTC_12b54.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_12b54.dir\Debug\\" /Fd"cmTC_12b54.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\CheckSymbolExists.c"
+  CheckSymbolExists.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_12b54.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_12b54.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_12b54.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_12b54.dir\Debug\CheckSymbolExists.obj
+  cmTC_12b54.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_12b54.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_12b54.dir\Debug\cmTC_12b54.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_12b54.dir\Debug\cmTC_12b54.tlog\cmTC_12b54.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_12b54.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.17
+
+File D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <windows.h>
+#include <winsock.h>
+#include <ws2tcpip.h>
+#include <winsock2.h>
+#include <stdio.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/utime.h>
+#include <assert.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <io.h>
+#include <locale.h>
+#include <setjmp.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <process.h>
+#include <stddef.h>
+#include <malloc.h>
+#include <memory.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setsockopt
+  return ((int*)(&setsockopt))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing Curl Test HAVE_IOCTLSOCKET passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_87d26.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:32:55.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_87d26.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_87d26.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_87d26.dir\Debug\cmTC_87d26.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_87d26.dir\Debug\cmTC_87d26.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET /D HAVE_WINDOWS_H /D HAVE_WINSOCK_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_87d26.dir\Debug\\" /Fd"cmTC_87d26.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET /D HAVE_WINDOWS_H /D HAVE_WINSOCK_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_87d26.dir\Debug\\" /Fd"cmTC_87d26.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\CMake\CurlTests.c"
+  
+  CurlTests.c
+d:\miners\sgminer-mad\submodules\curl-7.60.0\cmake\curltests.c(322): warning C4700: utilizzata variabile locale 'socket' non inizializzata [D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_87d26.vcxproj]
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_87d26.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_87d26.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_87d26.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_87d26.dir\Debug\CurlTests.obj
+  cmTC_87d26.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_87d26.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_87d26.dir\Debug\cmTC_87d26.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_87d26.dir\Debug\cmTC_87d26.tlog\cmTC_87d26.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_87d26.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+
+"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_87d26.vcxproj" (destinazione predefinita) (1) ->
+(destinazione: ClCompile) -> 
+  d:\miners\sgminer-mad\submodules\curl-7.60.0\cmake\curltests.c(322): warning C4700: utilizzata variabile locale 'socket' non inizializzata [D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_87d26.vcxproj]
+
+    Avvisi: 1
+    Errori: 0
+
+Tempo trascorso 00:00:02.32
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_e9a20.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:01.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_e9a20.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_e9a20.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_e9a20.dir\Debug\cmTC_e9a20.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_e9a20.dir\Debug\cmTC_e9a20.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET_CAMEL_FIONBIO /D HAVE_WINDOWS_H /D HAVE_WINSOCK_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e9a20.dir\Debug\\" /Fd"cmTC_e9a20.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET_CAMEL_FIONBIO /D HAVE_WINDOWS_H /D HAVE_WINSOCK_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e9a20.dir\Debug\\" /Fd"cmTC_e9a20.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\CMake\CurlTests.c"
+  
+  CurlTests.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_e9a20.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_e9a20.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_e9a20.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_e9a20.dir\Debug\CurlTests.obj
+  cmTC_e9a20.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_e9a20.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_e9a20.dir\Debug\cmTC_e9a20.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_e9a20.dir\Debug\cmTC_e9a20.tlog\cmTC_e9a20.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_e9a20.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.06
+
+Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_3b7aa.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:04.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_3b7aa.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_3b7aa.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_3b7aa.dir\Debug\cmTC_3b7aa.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_3b7aa.dir\Debug\cmTC_3b7aa.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET_FIONBIO /D HAVE_WINDOWS_H /D HAVE_WINSOCK_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3b7aa.dir\Debug\\" /Fd"cmTC_3b7aa.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_IOCTLSOCKET_FIONBIO /D HAVE_WINDOWS_H /D HAVE_WINSOCK_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3b7aa.dir\Debug\\" /Fd"cmTC_3b7aa.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\CMake\CurlTests.c"
+  
+  CurlTests.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_3b7aa.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_3b7aa.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_3b7aa.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_3b7aa.dir\Debug\CurlTests.obj
+  cmTC_3b7aa.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_3b7aa.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_3b7aa.dir\Debug\cmTC_3b7aa.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_3b7aa.dir\Debug\cmTC_3b7aa.tlog\cmTC_3b7aa.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_3b7aa.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.85
+
+Performing Curl Test HAVE_SOCKLEN_T passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_a5f12.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:13.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_a5f12.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_a5f12.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_a5f12.dir\Debug\cmTC_a5f12.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_a5f12.dir\Debug\cmTC_a5f12.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_SOCKLEN_T /D HAVE_WINDOWS_H /D HAVE_WINSOCK_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a5f12.dir\Debug\\" /Fd"cmTC_a5f12.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_SOCKLEN_T /D HAVE_WINDOWS_H /D HAVE_WINSOCK_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a5f12.dir\Debug\\" /Fd"cmTC_a5f12.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\CMake\CurlTests.c"
+  
+  CurlTests.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_a5f12.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_a5f12.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_a5f12.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_a5f12.dir\Debug\CurlTests.obj
+  cmTC_a5f12.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_a5f12.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_a5f12.dir\Debug\cmTC_a5f12.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_a5f12.dir\Debug\cmTC_a5f12.tlog\cmTC_a5f12.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_a5f12.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.72
+
+Performing Curl Test HAVE_BOOL_T passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_3babb.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:16.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_3babb.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_3babb.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_3babb.dir\Debug\cmTC_3babb.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_3babb.dir\Debug\cmTC_3babb.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_BOOL_T /D HAVE_WINDOWS_H /D HAVE_WINSOCK_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3babb.dir\Debug\\" /Fd"cmTC_3babb.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\CMake\CurlTests.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_BOOL_T /D HAVE_WINDOWS_H /D HAVE_WINSOCK_H /D HAVE_WS2TCPIP_H /D HAVE_WINSOCK2_H /D HAVE_STDIO_H /D HAVE_SYS_STAT_H /D HAVE_SYS_TYPES_H /D HAVE_SYS_UTIME_H /D HAVE_ASSERT_H /D HAVE_ERRNO_H /D HAVE_FCNTL_H /D HAVE_IO_H /D HAVE_LOCALE_H /D HAVE_SETJMP_H /D HAVE_SIGNAL_H /D HAVE_STDBOOL_H /D HAVE_STDLIB_H /D HAVE_STRING_H /D HAVE_TIME_H /D HAVE_PROCESS_H /D HAVE_STDDEF_H /D HAVE_MALLOC_H /D HAVE_MEMORY_H /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3babb.dir\Debug\\" /Fd"cmTC_3babb.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\CMake\CurlTests.c"
+  
+  CurlTests.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_3babb.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_3babb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_3babb.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_3babb.dir\Debug\CurlTests.obj
+  cmTC_3babb.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_3babb.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_3babb.dir\Debug\cmTC_3babb.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_3babb.dir\Debug\cmTC_3babb.tlog\cmTC_3babb.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_3babb.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.49
+
+Determining size of off_t passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_50bac.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:20.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_50bac.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_50bac.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_50bac.dir\Debug\cmTC_50bac.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_50bac.dir\Debug\cmTC_50bac.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_50bac.dir\Debug\\" /Fd"cmTC_50bac.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_OFF_T.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_50bac.dir\Debug\\" /Fd"cmTC_50bac.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_OFF_T.c"
+  SIZEOF_OFF_T.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_50bac.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_50bac.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_50bac.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_50bac.dir\Debug\SIZEOF_OFF_T.obj
+  cmTC_50bac.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_50bac.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_50bac.dir\Debug\cmTC_50bac.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_50bac.dir\Debug\cmTC_50bac.tlog\cmTC_50bac.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_50bac.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.80
+
+
+Determining size of curl_off_t passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_e12ea.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:22.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_e12ea.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_e12ea.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_e12ea.dir\Debug\cmTC_e12ea.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_e12ea.dir\Debug\cmTC_e12ea.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e12ea.dir\Debug\\" /Fd"cmTC_e12ea.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_CURL_OFF_T.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e12ea.dir\Debug\\" /Fd"cmTC_e12ea.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_CURL_OFF_T.c"
+  SIZEOF_CURL_OFF_T.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_e12ea.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_e12ea.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_e12ea.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_e12ea.dir\Debug\SIZEOF_CURL_OFF_T.obj
+  cmTC_e12ea.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_e12ea.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_e12ea.dir\Debug\cmTC_e12ea.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_e12ea.dir\Debug\cmTC_e12ea.tlog\cmTC_e12ea.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_e12ea.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.86
+
+
+Determining size of socklen_t passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_140d6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:30.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_140d6.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_140d6.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_140d6.dir\Debug\cmTC_140d6.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_140d6.dir\Debug\cmTC_140d6.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_140d6.dir\Debug\\" /Fd"cmTC_140d6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\CURL_SIZEOF_CURL_SOCKLEN_T.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_140d6.dir\Debug\\" /Fd"cmTC_140d6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\CURL_SIZEOF_CURL_SOCKLEN_T.c"
+  
+  CURL_SIZEOF_CURL_SOCKLEN_T.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_140d6.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_140d6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_140d6.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_140d6.dir\Debug\CURL_SIZEOF_CURL_SOCKLEN_T.obj
+  cmTC_140d6.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_140d6.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_140d6.dir\Debug\cmTC_140d6.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_140d6.dir\Debug\cmTC_140d6.tlog\cmTC_140d6.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_140d6.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.74
+
+
+Performing C SOURCE FILE Test curl_cv_recv succeeded with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_112d1.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:33.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_112d1.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_112d1.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_112d1.dir\Debug\cmTC_112d1.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_112d1.dir\Debug\cmTC_112d1.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D curl_cv_recv /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_112d1.dir\Debug\\" /Fd"cmTC_112d1.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D curl_cv_recv /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_112d1.dir\Debug\\" /Fd"cmTC_112d1.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  
+  src.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_112d1.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_112d1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_112d1.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_112d1.dir\Debug\src.obj
+  cmTC_112d1.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_112d1.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_112d1.dir\Debug\cmTC_112d1.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_112d1.dir\Debug\cmTC_112d1.tlog\cmTC_112d1.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_112d1.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.29
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#include <winsock.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+int main(void) {
+    recv(0, 0, 0, 0);
+    return 0;
+}
+Performing C SOURCE FILE Test curl_cv_func_recv_test succeeded with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_c3f4e.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:36.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_c3f4e.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_c3f4e.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_c3f4e.dir\Debug\cmTC_c3f4e.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_c3f4e.dir\Debug\cmTC_c3f4e.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D curl_cv_func_recv_test /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c3f4e.dir\Debug\\" /Fd"cmTC_c3f4e.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D curl_cv_func_recv_test /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c3f4e.dir\Debug\\" /Fd"cmTC_c3f4e.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+d:\miners\sgminer-mad\submodules\curl-7.60.0\builds\cmakefiles\cmaketmp\src.c(10): warning C4273: 'recv': collegamento dll non coerente [D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_c3f4e.vcxproj]
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\um\winsock2.h(2001): note: vedere la precedente definizione di 'recv'
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_c3f4e.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_c3f4e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_c3f4e.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_c3f4e.dir\Debug\src.obj
+  cmTC_c3f4e.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_c3f4e.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_c3f4e.dir\Debug\cmTC_c3f4e.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_c3f4e.dir\Debug\cmTC_c3f4e.tlog\cmTC_c3f4e.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_c3f4e.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+
+"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_c3f4e.vcxproj" (destinazione predefinita) (1) ->
+(destinazione: ClCompile) -> 
+  d:\miners\sgminer-mad\submodules\curl-7.60.0\builds\cmakefiles\cmaketmp\src.c(10): warning C4273: 'recv': collegamento dll non coerente [D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_c3f4e.vcxproj]
+
+    Avvisi: 1
+    Errori: 0
+
+Tempo trascorso 00:00:02.12
+
+Source file was:
+
+                  #undef inline
+#include <winsock2.h>
+#include <windows.h>
+#include <winsock.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+                  extern int PASCAL
+                  recv(SOCKET, char *, int, int);
+                  int main(void) {
+                    SOCKET s=0;
+                    char * buf=0;
+                    int len=0;
+                    int flags=0;
+                    int res = recv(s, buf, len, flags);
+                    (void) res;
+                    return 0;
+                  }
+Performing C SOURCE FILE Test curl_cv_send succeeded with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_b5cf1.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:38.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_b5cf1.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_b5cf1.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_b5cf1.dir\Debug\cmTC_b5cf1.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_b5cf1.dir\Debug\cmTC_b5cf1.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D curl_cv_send /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b5cf1.dir\Debug\\" /Fd"cmTC_b5cf1.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D curl_cv_send /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b5cf1.dir\Debug\\" /Fd"cmTC_b5cf1.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_b5cf1.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_b5cf1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_b5cf1.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_b5cf1.dir\Debug\src.obj
+  cmTC_b5cf1.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_b5cf1.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_b5cf1.dir\Debug\cmTC_b5cf1.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_b5cf1.dir\Debug\cmTC_b5cf1.tlog\cmTC_b5cf1.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_b5cf1.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.18
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#include <winsock.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+int main(void) {
+    send(0, 0, 0, 0);
+    return 0;
+}
+Performing C SOURCE FILE Test curl_cv_func_send_test succeeded with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_f059a.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:41.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_f059a.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_f059a.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_f059a.dir\Debug\cmTC_f059a.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_f059a.dir\Debug\cmTC_f059a.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D curl_cv_func_send_test /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f059a.dir\Debug\\" /Fd"cmTC_f059a.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D curl_cv_func_send_test /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f059a.dir\Debug\\" /Fd"cmTC_f059a.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+d:\miners\sgminer-mad\submodules\curl-7.60.0\builds\cmakefiles\cmaketmp\src.c(10): warning C4273: 'send': collegamento dll non coerente [D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_f059a.vcxproj]
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\um\winsock2.h(2076): note: vedere la precedente definizione di 'send'
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_f059a.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_f059a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_f059a.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_f059a.dir\Debug\src.obj
+  cmTC_f059a.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_f059a.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_f059a.dir\Debug\cmTC_f059a.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_f059a.dir\Debug\cmTC_f059a.tlog\cmTC_f059a.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_f059a.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+
+"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_f059a.vcxproj" (destinazione predefinita) (1) ->
+(destinazione: ClCompile) -> 
+  d:\miners\sgminer-mad\submodules\curl-7.60.0\builds\cmakefiles\cmaketmp\src.c(10): warning C4273: 'send': collegamento dll non coerente [D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_f059a.vcxproj]
+
+    Avvisi: 1
+    Errori: 0
+
+Tempo trascorso 00:00:02.14
+
+Source file was:
+
+                  #undef inline
+#include <winsock2.h>
+#include <windows.h>
+#include <winsock.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+                  extern int PASCAL
+                  send(SOCKET, const char *, int, int);
+                  int main(void) {
+                    SOCKET s=0;
+                    const char * buf=0;
+                    int len=0;
+                    int flags=0;
+                    int res = send(s, buf, len, flags);
+                    (void) res;
+                    return 0;
+                  }
+Performing C SOURCE FILE Test HAVE_STRUCT_TIMEVAL succeeded with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_f2220.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:46.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_f2220.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_f2220.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_f2220.dir\Debug\cmTC_f2220.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_f2220.dir\Debug\cmTC_f2220.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_STRUCT_TIMEVAL /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f2220.dir\Debug\\" /Fd"cmTC_f2220.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_STRUCT_TIMEVAL /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f2220.dir\Debug\\" /Fd"cmTC_f2220.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_f2220.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_f2220.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_f2220.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_f2220.dir\Debug\src.obj
+  cmTC_f2220.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_f2220.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_f2220.dir\Debug\cmTC_f2220.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_f2220.dir\Debug\cmTC_f2220.tlog\cmTC_f2220.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_f2220.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.11
+
+Source file was:
+#undef inline
+#include <winsock2.h>
+#include <windows.h>
+#include <winsock.h>
+#ifndef WIN32_LEAN_AND_MEAN
+#define WIN32_LEAN_AND_MEAN
+#endif
+int main(void) {
+  struct timeval ts;
+  ts.tv_sec  = 0;
+  ts.tv_usec = 0;
+  (void)ts;
+  return 0;
+}
+Determining size of sig_atomic_t passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_ff400.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:50.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_ff400.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_ff400.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_ff400.dir\Debug\cmTC_ff400.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_ff400.dir\Debug\cmTC_ff400.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_SIGNAL_H /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ff400.dir\Debug\\" /Fd"cmTC_ff400.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_SIG_ATOMIC_T.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_SIGNAL_H /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ff400.dir\Debug\\" /Fd"cmTC_ff400.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_SIG_ATOMIC_T.c"
+  SIZEOF_SIG_ATOMIC_T.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_ff400.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_ff400.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_ff400.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_ff400.dir\Debug\SIZEOF_SIG_ATOMIC_T.obj
+  cmTC_ff400.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_ff400.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_ff400.dir\Debug\cmTC_ff400.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_ff400.dir\Debug\cmTC_ff400.tlog\cmTC_ff400.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_ff400.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.36
+
+
+Performing C SOURCE FILE Test HAVE_SIG_ATOMIC_T_NOT_VOLATILE succeeded with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_61dbd.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:51.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_61dbd.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_61dbd.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_61dbd.dir\Debug\cmTC_61dbd.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_61dbd.dir\Debug\cmTC_61dbd.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_SIG_ATOMIC_T_NOT_VOLATILE /D HAVE_SIGNAL_H /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_61dbd.dir\Debug\\" /Fd"cmTC_61dbd.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_SIG_ATOMIC_T_NOT_VOLATILE /D HAVE_SIGNAL_H /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_61dbd.dir\Debug\\" /Fd"cmTC_61dbd.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\src.c"
+  src.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_61dbd.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_61dbd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_61dbd.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_61dbd.dir\Debug\src.obj
+  cmTC_61dbd.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_61dbd.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_61dbd.dir\Debug\cmTC_61dbd.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_61dbd.dir\Debug\cmTC_61dbd.tlog\cmTC_61dbd.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_61dbd.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:01.34
+
+Source file was:
+
+    #ifdef HAVE_SIGNAL_H
+    #  include <signal.h>
+    #endif
+    int main(void) {
+      static volatile sig_atomic_t dummy = 0;
+      (void)dummy;
+      return 0;
+    }
+Determining size of struct sockaddr_storage passed with the following output:
+Change Dir: D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_0bedb.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Microsoft (R) Build Engine versione 15.6.85.37198 per .NET Framework
+Copyright (C) Microsoft Corporation. Tutti i diritti sono riservati.
+
+Compilazione avviata 02/06/2018 07:33:53.
+Progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_0bedb.vcxproj" sul nodo 1 (destinazioni predefinite).
+PrepareForBuild:
+  Creazione directory "cmTC_0bedb.dir\Debug\".
+  Creazione directory "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\".
+  Creazione directory "cmTC_0bedb.dir\Debug\cmTC_0bedb.tlog\".
+InitializeBuildStatus:
+  Creazione di "cmTC_0bedb.dir\Debug\cmTC_0bedb.tlog\unsuccessfulbuild". Ô stato specificato "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\CL.exe /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_SIGNAL_H /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0bedb.dir\Debug\\" /Fd"cmTC_0bedb.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_STRUCT_SOCKADDR_STORAGE.c"
+  Microsoft (R) C/C++ Optimizing Compiler versione 19.13.26129 per x86
+  Copyright (C) Microsoft Corporation. Tutti i diritti  sono riservati.
+  
+  cl /c /I"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include" /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D HAVE_SIGNAL_H /D _WINSOCKAPI_= /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0bedb.dir\Debug\\" /Fd"cmTC_0bedb.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CheckTypeSize\SIZEOF_STRUCT_SOCKADDR_STORAGE.c"
+  SIZEOF_STRUCT_SOCKADDR_STORAGE.c
+  
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_0bedb.exe" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_0bedb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/CMakeTmp/Debug/cmTC_0bedb.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_0bedb.dir\Debug\SIZEOF_STRUCT_SOCKADDR_STORAGE.obj
+  cmTC_0bedb.vcxproj -> D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\Debug\cmTC_0bedb.exe
+FinalizeBuildStatus:
+  Eliminazione del file "cmTC_0bedb.dir\Debug\cmTC_0bedb.tlog\unsuccessfulbuild" in corso.
+  Aggiornamento timestamp di "cmTC_0bedb.dir\Debug\cmTC_0bedb.tlog\cmTC_0bedb.lastbuildstate".
+Compilazione progetto "D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\CMakeTmp\cmTC_0bedb.vcxproj" (destinazioni predefinite) completata.
+
+Compilazione completata.
+    Avvisi: 0
+    Errori: 0
+
+Tempo trascorso 00:00:02.12
+
+

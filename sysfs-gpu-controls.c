@@ -1,6 +1,6 @@
 #include <stdint.h>
 #include <stdbool.h>
-#include <dirent.h>
+//#include <dirent.h>
 
 #include "miner.h"
 #include "pptable_v1_0.h"

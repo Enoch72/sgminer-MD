@@ -1326,6 +1326,11 @@ typedef struct _dev_blk_ctx {
   struct work *work;
 } dev_blk_ctx;
 
+
+#ifndef CURL_ERROR_SIZE
+#define CURL_ERROR_SIZE 1024
+#endif
+
 struct curl_ent {
   CURL *curl;
   char curl_err_str[CURL_ERROR_SIZE];

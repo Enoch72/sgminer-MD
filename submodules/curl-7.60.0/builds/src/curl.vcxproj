@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CBB3B0C9-C4B8-37F3-9BA6-9150A3D2F27A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>curl</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">curl.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">curl-d</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">curl.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">curl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">curl.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">curl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">curl.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">curl</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_WIN32_WINNT=0x0600;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_WIN32_WINNT=0x0600;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\lib\Debug\libcurl-d.lib;wldap32.lib;winmm.lib;ws2_32.lib;advapi32.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/Debug/curl-d.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/Debug/curl-d.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0600;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0600;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\lib\Release\libcurl.lib;wldap32.lib;winmm.lib;ws2_32.lib;advapi32.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/Release/curl.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/Release/curl.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0600;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0600;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\lib\MinSizeRel\libcurl.lib;wldap32.lib;winmm.lib;ws2_32.lib;advapi32.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/MinSizeRel/curl.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/MinSizeRel/curl.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0600;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_WIN32_WINNT=0x0600;HAVE_CONFIG_H;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include\curl;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\include;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\lib\RelWithDebInfo\libcurl.lib;wldap32.lib;winmm.lib;ws2_32.lib;advapi32.lib;crypt32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/RelWithDebInfo/curl.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/RelWithDebInfo/curl.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule D:/Miners/sgminer-Mad/submodules/curl-7.60.0/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/Miners/sgminer-Mad/submodules/curl-7.60.0 -BD:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds --check-stamp-file D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Miners/sgminer-Mad/submodules/curl-7.60.0/src/CMakeLists.txt;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\CMakeLists.txt;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\Makefile.inc.cmake;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule D:/Miners/sgminer-Mad/submodules/curl-7.60.0/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/Miners/sgminer-Mad/submodules/curl-7.60.0 -BD:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds --check-stamp-file D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Miners/sgminer-Mad/submodules/curl-7.60.0/src/CMakeLists.txt;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\CMakeLists.txt;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\Makefile.inc.cmake;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule D:/Miners/sgminer-Mad/submodules/curl-7.60.0/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/Miners/sgminer-Mad/submodules/curl-7.60.0 -BD:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds --check-stamp-file D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Miners/sgminer-Mad/submodules/curl-7.60.0/src/CMakeLists.txt;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\CMakeLists.txt;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\Makefile.inc.cmake;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule D:/Miners/sgminer-Mad/submodules/curl-7.60.0/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -HD:/Miners/sgminer-Mad/submodules/curl-7.60.0 -BD:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds --check-stamp-file D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Miners/sgminer-Mad/submodules/curl-7.60.0/src/CMakeLists.txt;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\CMakeLists.txt;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\Makefile.inc.cmake;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\CMakeFiles\1357d27596441c1669612d98881da45c\tool_hugehelp.c.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating tool_hugehelp.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "/* built-in manual is disabled, blank function */" &gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "#include \"tool_hugehelp.h\"" &gt;&gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "void hugehelp(void) {}" &gt;&gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/1357d27596441c1669612d98881da45c/tool_hugehelp.c.rule;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_hugehelp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\tool_hugehelp.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating tool_hugehelp.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "/* built-in manual is disabled, blank function */" &gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "#include \"tool_hugehelp.h\"" &gt;&gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "void hugehelp(void) {}" &gt;&gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/1357d27596441c1669612d98881da45c/tool_hugehelp.c.rule;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_hugehelp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\tool_hugehelp.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating tool_hugehelp.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "/* built-in manual is disabled, blank function */" &gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "#include \"tool_hugehelp.h\"" &gt;&gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "void hugehelp(void) {}" &gt;&gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/1357d27596441c1669612d98881da45c/tool_hugehelp.c.rule;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_hugehelp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\tool_hugehelp.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating tool_hugehelp.c</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "/* built-in manual is disabled, blank function */" &gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "#include \"tool_hugehelp.h\"" &gt;&gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo "void hugehelp(void) {}" &gt;&gt; tool_hugehelp.c
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/1357d27596441c1669612d98881da45c/tool_hugehelp.c.rule;D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_hugehelp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\tool_hugehelp.c</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\slist_wc.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_binmode.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_bname.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_dbg.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_hdr.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_prg.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_rea.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_see.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_wrt.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cfgable.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_convert.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_dirhie.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_doswin.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_easysrc.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_filetime.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_formparse.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_getparam.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_getpass.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_help.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_helpers.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_homedir.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\src\tool_hugehelp.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_libinfo.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_main.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_metalink.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_msgs.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_operate.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_operhlp.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_panykey.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_paramhlp.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_parsecfg.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_strdup.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_setopt.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_sleep.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_urlglob.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_util.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_vms.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_writeout.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_xattr.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib\strtoofft.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib\nonblock.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib\warnless.c"  />
+    <ClCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\lib\curl_ctype.c"  />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\slist_wc.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_binmode.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_bname.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_dbg.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_hdr.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_prg.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_rea.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_see.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cb_wrt.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_cfgable.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_convert.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_dirhie.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_doswin.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_easysrc.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_filetime.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_formparse.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_getparam.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_getpass.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_help.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_helpers.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_homedir.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_hugehelp.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_libinfo.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_main.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_metalink.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_msgs.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_operate.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_operhlp.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_panykey.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_paramhlp.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_parsecfg.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_sdecls.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_setopt.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_setup.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_sleep.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_strdup.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_urlglob.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_util.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_version.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_vms.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_writeout.h" />
+    <ClInclude Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\tool_xattr.h" />
+    <ResourceCompile Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\src\curl.rc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\ZERO_CHECK.vcxproj">
+      <Project>{879F641D-B2B2-396D-AEB2-8A4E66D3883F}</Project>
+      <Name>ZERO_CHECK</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Miners\sgminer-Mad\submodules\curl-7.60.0\builds\lib\libcurl.vcxproj">
+      <Project>{3CAE07D4-ADF1-3987-BC46-39F7BC1F7762}</Project>
+      <Name>libcurl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

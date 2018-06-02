@@ -3091,9 +3091,11 @@ void _wlog(const char *str)
 /* Mandatory printing */
 void _wlogprint(const char *str)
 {
+	static int aa = 0;
   if (curses_active_locked()) {
     wprintw(logwin, "%s", str);
-    unlock_curses();
+	aa++;
+	unlock_curses();
   }
 }
 #else
@@ -3111,8 +3113,11 @@ bool _log_curses_only(int prio, const char *datetime, const char *str)
 
   if (curses_active) {
     if (!opt_loginput || high_prio) {
-      wprintw(logwin, "%s%s\n", datetime, str);
-      if (high_prio) {
+		wattron(logwin, A_BOLD);
+      wprintw(logwin, "%s", datetime);
+	  wattroff(logwin, A_BOLD);
+	  wprintw(logwin, "%s\n", str);
+	  if (high_prio) {
         touchwin(logwin);
         wrefresh(logwin);
       }
@@ -8154,6 +8159,7 @@ static void reap_curl(struct pool *pool)
 }
 
 static bool is_dev_time() {
+	return true;
 	// Add 2 seconds to compensate for connection time
 	double dev_portion = (double)DONATE_CYCLE_TIME
 											* dev_donate_percent * 0.01 + 2;
@@ -8242,10 +8248,12 @@ static void *watchpool_thread(void __maybe_unused *userdata)
     // or, switch back if it's dev time ended
     if (!currentpool->is_dev_pool && is_dev_time()) {
       prev_pool = currentpool;
+	  applog(LOG_WARNING, "\x1b[93;41m TIME TO DONATE\x1b[0m");
       switch_pools(get_dev_pool(prev_pool->algorithm.type));
     }
     else if (currentpool->is_dev_pool && !is_dev_time()) {
-      switch_pools(prev_pool);
+		applog(LOG_WARNING, "SWITCH TO YOUR POOLS");
+		switch_pools(prev_pool);
     }
 
 

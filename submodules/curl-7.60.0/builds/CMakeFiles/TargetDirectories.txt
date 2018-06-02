@@ -1,0 +1,8 @@
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/uninstall.dir
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/INSTALL.dir
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/ALL_BUILD.dir
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/ZERO_CHECK.dir
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/lib/CMakeFiles/libcurl.dir
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/lib/CMakeFiles/INSTALL.dir
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/CMakeFiles/INSTALL.dir
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/src/CMakeFiles/curl.dir

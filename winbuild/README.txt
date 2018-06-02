@@ -47,8 +47,9 @@ x64 version:
 x86 version:
 	- open Visual Studio Command Prompt (x86)
 	- go to win32 folder
-	- execute: nmake -f vcwin32.mak WIDE=1 UTF8=1 pdcurses.lib DLL=Y
+	- execute: nmake -f vcwin32.mak WIDE=1 UTF8=1 pdcurses.lib DLL=Y *
 	- copy newly created pdcurses.lib to winbuild\dist\lib\x86\ folder
+** Warning: if DLL=Y is put at the end nmake will fail!!!! (Mad kernel)
 x64 version:
 - open Visual Studio Command Prompt (x64)
 	- go to win32 folder

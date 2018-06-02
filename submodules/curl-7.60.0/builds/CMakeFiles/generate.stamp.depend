@@ -1,0 +1,67 @@
+# CMake generation dependency list for this directory.
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/CMakeLists.txt
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/CMake/Utilities.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/CMake/Macros.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckCCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/3.9.2/CMakeSystem.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeSystemSpecificInitialize.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/3.9.2/CMakeCCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/WindowsPaths.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/Platform/Windows-MSVC.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/builds/CMakeFiles/3.9.2/CMakeRCCompiler.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeCommonLanguageInclude.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/CMake/CurlSymbolHiding.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPerl.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindCygwin.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFiles.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakeDependentOption.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/CMake/Platforms/WindowsCache.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckSymbolExists.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindZLIB.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/SelectLibraryConfigurations.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPackageMessage.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/CMake/FindLibSSH2.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckStructHasMember.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckCXXSourceCompiles.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/CMake/OtherTests.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckCSourceRuns.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CTest.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CTestUseLaunchers.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/curl-config.in
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/libcurl.pc.in
+C:/Program Files/CMake/share/cmake-3.9/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/WriteBasicConfigVersionFile.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/CMake/curl-config.cmake
+D:/Miners/sgminer-Mad/submodules/curl-7.60.0/CMake/cmake_uninstall.cmake.in
