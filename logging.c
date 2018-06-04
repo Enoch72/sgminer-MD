@@ -24,14 +24,14 @@ int opt_log_show_date = false;
 /* per default priorities higher than LOG_NOTICE are logged */
 int opt_log_level = LOG_NOTICE;
 
-static void _my_log_curses(int prio, const char *datetime, const char *str)
+static void _my_log_curses(int prio, const char *datetime, const char *str, const char* fmt, va_list args)
 {
 	if (opt_quiet && prio != LOG_ERR)
 		return;
 
 #ifdef HAVE_CURSES
 	extern bool use_curses;
-	if (use_curses && _log_curses_only(prio, datetime, str))
+	if (use_curses && _log_curses_only(prio, datetime, str, fmt, args))
 		;
 	else
 #endif
@@ -60,10 +60,11 @@ void applogsiz(int prio, int size, const char* fmt, ...)
 void vapplogsiz(int prio, int size, const char* fmt, va_list args)
 {
   if ((opt_debug || prio != LOG_DEBUG)) {
-    char *tmp42 = (char *)calloc(size + 1, 1);
+    char tmp42[8192]; // Use stack, not heap
     vsnprintf(tmp42, size, fmt, args);
-    _applog(prio, tmp42, false);
-    free(tmp42);
+	int len = strlen(tmp42) - 1;
+	while (len && tmp42[len] <= 32) { tmp42[len] = 0; len--; }
+    _applog(prio, tmp42, false,fmt, args);
   }
 #ifdef DEV_DEBUG_MODE
   else if(prio == LOG_DEBUG) {
@@ -78,7 +79,7 @@ void vapplogsiz(int prio, int size, const char* fmt, va_list args)
 /*
  * log function
  */
-void _applog(int prio, const char *str, bool force)
+void _applog(int prio, const char *str, bool force,const char* fmt, va_list args)
 {
 #ifdef HAVE_SYSLOG_H
   if (use_syslog) {
@@ -117,11 +118,11 @@ void _applog(int prio, const char *str, bool force)
         tm->tm_year + 1900,
         tm->tm_mon + 1,
         tm->tm_mday);
-      _applog(prio, date_output_str, force);
+      _applog(prio, date_output_str, force,fmt,args);
     }
 
     if (opt_log_show_date) {
-      snprintf(datetime, sizeof(datetime), "[%d-%02d-%02d %02d:%02d:%02d] ",
+      snprintf(datetime, sizeof(datetime), "%d-%02d-%02d %02d:%02d:%02d ",
         tm->tm_year + 1900,
         tm->tm_mon + 1,
         tm->tm_mday,
@@ -130,7 +131,7 @@ void _applog(int prio, const char *str, bool force)
         tm->tm_sec);
     }
     else {
-      snprintf(datetime, sizeof(datetime), "[%02d:%02d:%02d] ",
+      snprintf(datetime, sizeof(datetime), "%02d:%02d:%02d ",
         tm->tm_hour,
         tm->tm_min,
         tm->tm_sec);
@@ -152,7 +153,7 @@ void _applog(int prio, const char *str, bool force)
       }
 
       if (write_console) {
-        _my_log_curses(prio, datetime, str);
+		  _my_log_curses(prio, datetime, str, fmt, args);
       }
       mutex_unlock(&console_lock);
     }

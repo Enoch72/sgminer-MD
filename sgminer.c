@@ -470,7 +470,7 @@ static void applog_and_exit(const char *fmt, ...)
   va_start(ap, fmt);
   vsnprintf(exit_buf, sizeof(exit_buf), fmt, ap);
   va_end(ap);
-  _applog(LOG_ERR, exit_buf, true);
+  _applog(LOG_ERR, exit_buf, true,fmt,ap);
   exit(1);
 }
 
@@ -2886,25 +2886,28 @@ static void curses_print_uptime(struct timeval *start_time)
 
 
 /* Must be called with curses mutex lock held and curses_active */
+void wspecialprint(WINDOW *w, chtype basecolor, const char* fmt, ...);
+
 static void curses_print_status(void)
 {
   struct pool *pool = current_pool();
   unsigned short int line = 0;
-
-  wattron(statuswin, A_BOLD);
-  cg_mvwprintw(statuswin, line, 0, PACKAGE " " CGMINER_VERSION " - Started: %s", datestamp);
+  wattrset(statuswin, COLOR_PAIR(1 + COLOR_GREEN) | A_BOLD);
+  cg_mvwprintw(statuswin, line, 0,"%s", PACKAGE_STRING);
+  wattrset(statuswin,COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
+  cg_mvwprintw(statuswin, line, strlen(PACKAGE_STRING), " - Started: %s", datestamp);
   curses_print_uptime(&launch_time);
-  wattroff(statuswin, A_BOLD);
-
+  wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE) | A_BOLD);
   mvwhline(statuswin, ++line, 0, '-', 80);
-
+  wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE));
   cg_mvwprintw(statuswin, ++line, 0, "%s", statusline);
   wclrtoeol(statuswin);
-
+  
   cg_mvwprintw(statuswin, ++line, 0, "ST: %d  SS: %d  NB: %d  LW: %d  GF: %d  RF: %d",
     total_staged(), total_stale, new_blocks,
     local_work, total_go, total_ro);
   wclrtoeol(statuswin);
+  
 
   if (shared_strategy() && total_pools > 1) {
     cg_mvwprintw(statuswin, ++line, 0, "Connected to multiple pools %s block change notify",
@@ -2921,10 +2924,10 @@ static void curses_print_status(void)
 
   cg_mvwprintw(statuswin, ++line, 0, "Block: %s...  Diff:%s  Started: %s  Best share: %s   ",
          prev_block, block_diff, blocktime, best_share);
-
+  wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE) | A_BOLD);
   mvwhline(statuswin, ++line, 0, '-', 80);
   mvwhline(statuswin, statusy - 1, 0, '-', 80);
-
+  wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE));
   cg_mvwprintw(statuswin, devcursor - 1, 0, "[P]ool management [G]PU management [S]ettings [D]isplay options [Q]uit");
 }
 
@@ -3041,7 +3044,7 @@ static void check_winsizes(void)
   if (curses_active_locked()) {
     int y, x;
 
-    erase();
+   // erase();
     x = getmaxx(statuswin);
     if (logstart > LINES - 2)
       statusy = LINES - 2;
@@ -3053,6 +3056,7 @@ static void check_winsizes(void)
     y -= logcursor;
     wresize(logwin, y, x);
     mvwin(logwin, logcursor, 0);
+	refresh();
     unlock_curses();
   }
 }
@@ -3104,8 +3108,111 @@ static void switch_logsize(bool __maybe_unused newdevs)
 }
 #endif
 
+
+// https://stackoverflow.com/questions/779875/what-is-the-function-to-replace-string-in-c
+
+// You must free the result if result is non-NULL.
+char *str_replace(const char *original, char *rep, char *with) {
+	char *result; // the return string
+	char *ins;    // the next insert point
+	char *tmp;    // varies
+	int len_rep;  // length of rep (the string to remove)
+	int len_with; // length of with (the string to replace rep with)
+	int len_front; // distance between rep and end of last rep
+	int count;    // number of replacements
+
+	// sanity checks and initialization
+	if (!original || !rep)
+		return NULL;
+	char *orig = (char *)original; // bruteforce cast
+	len_rep = strlen(rep);
+	if (len_rep == 0)
+		return NULL; // empty rep causes infinite loop during count
+	if (!with)
+		with = "";
+	len_with = strlen(with);
+
+	// count the number of replacements needed
+	ins = orig;
+	for (count = 0; tmp = strstr(ins, rep); ++count) {
+		ins = tmp + len_rep;
+	}
+
+	tmp = result = (char *)malloc(strlen(orig) + (len_with - len_rep) * count + 1);
+
+	if (!result)
+		return NULL;
+
+	// first time through the loop, all the variable are set correctly
+	// from here on,
+	//    tmp points to the end of the result string
+	//    ins points to the next occurrence of rep in orig
+	//    orig points to the remainder of orig after "end of rep"
+	while (count--) {
+		ins = strstr(orig, rep);
+		len_front = ins - orig;
+		tmp = strncpy(tmp, orig, len_front) + len_front;
+		tmp = strcpy(tmp, with) + len_with;
+		orig += len_front + len_rep; // move to next "end of rep"
+	}
+	strcpy(tmp, orig);
+	return result;
+}
+
+
+
+void wspecialprint(WINDOW *w, chtype basecolor, const char* fmt, va_list args)
+{
+	
+	const chtype s_colour = COLOR_PAIR(1+COLOR_CYAN) | A_BOLD;    // numeric values
+	const chtype d_colour = COLOR_PAIR(1 + COLOR_GREEN) | A_BOLD;  // string values
+	// replace %d
+	char * d = NULL, *s = NULL;
+	d = str_replace(fmt, "%d", "^%d?");
+	s = str_replace(d, "%s", "&%s?");
+	wattrset(w, basecolor);
+	int printed = 0;
+
+	if (!d || !s)
+		wprintw(w, fmt, args);
+	else
+	{
+		char s_tmp[2048];
+		vsnprintf(s_tmp, 2048, s, args);
+		int l = strlen(s_tmp);
+		chtype col = basecolor;
+		for (int i = 0; i < l; i++)
+		 {
+			 switch (s_tmp[i])
+			 {
+			   case '^': col = d_colour; break;
+			   case '&': col = s_colour; break;
+			   case '?': col = basecolor; break;
+			   default: { printed++;  waddch(w, s_tmp[i] | col);  };
+			 }
+		 }
+	}
+
+//	if ((printed+9) % 79 != 0) 
+		 wprintw(w, "\n");
+	
+	if (s)
+		free(s);
+	if (d)
+		free(d);
+}
+
+
+void wspecialprint(WINDOW *w, chtype basecolor, const char* fmt, ...)
+{
+	va_list args;
+	va_start(fmt, args);
+	wspecialprint(w, basecolor, fmt, args);
+	va_end(args);
+}
+
 #ifdef HAVE_CURSES
-bool _log_curses_only(int prio, const char *datetime, const char *str)
+bool _log_curses_only(int prio, const char *datetime, const char *str, const char* fmt, va_list args)
 {
   bool high_prio;
 
@@ -3113,10 +3220,21 @@ bool _log_curses_only(int prio, const char *datetime, const char *str)
 
   if (curses_active) {
     if (!opt_loginput || high_prio) {
-		wattron(logwin, A_BOLD);
+		
+		wattrset(logwin, COLOR_PAIR(1 + COLOR_WHITE) | A_BOLD);
       wprintw(logwin, "%s", datetime);
-	  wattroff(logwin, A_BOLD);
-	  wprintw(logwin, "%s\n", str);
+	  
+	  chtype basecolor = COLOR_PAIR(1 + COLOR_GREEN) | A_BOLD;
+	  
+	  if (prio == LOG_NOTICE)
+		  basecolor = COLOR_PAIR(1 + COLOR_WHITE);
+	  if (prio == LOG_WARNING)
+		  basecolor = COLOR_PAIR(1 + COLOR_WHITE);
+	  if (prio == LOG_ERR)
+		  basecolor = COLOR_PAIR(1 + COLOR_RED) | A_BOLD;
+	  wspecialprint(logwin, basecolor, fmt, args);
+	 // wprintw(logwin, "%s\n", fmt);
+	 ;
 	  if (high_prio) {
         touchwin(logwin);
         wrefresh(logwin);
@@ -8159,7 +8277,7 @@ static void reap_curl(struct pool *pool)
 }
 
 static bool is_dev_time() {
-	return true;
+    //return true;
 	// Add 2 seconds to compensate for connection time
 	double dev_portion = (double)DONATE_CYCLE_TIME
 											* dev_donate_percent * 0.01 + 2;
@@ -8248,7 +8366,7 @@ static void *watchpool_thread(void __maybe_unused *userdata)
     // or, switch back if it's dev time ended
     if (!currentpool->is_dev_pool && is_dev_time()) {
       prev_pool = currentpool;
-	  applog(LOG_WARNING, "\x1b[93;41m TIME TO DONATE\x1b[0m");
+	  applog(LOG_WARNING, "TIME TO DONATE");
       switch_pools(get_dev_pool(prev_pool->algorithm.type));
     }
     else if (currentpool->is_dev_pool && !is_dev_time()) {
@@ -8822,7 +8940,7 @@ static void enable_curses_windows(void)
   int x,y;
 
   getmaxyx(mainwin, y, x);
-  statuswin = newwin(logstart, x, 0, 0);
+  statuswin = newwin(/*logstart */11, x, 0, 0);
   leaveok(statuswin, true);
   logwin = newwin(y - logcursor, 0, logcursor, 0);
   idlok(logwin, true);
@@ -8842,6 +8960,11 @@ void enable_curses(void) {
   enable_curses_windows();
   curses_active = true;
   statusy = logstart;
+  
+  start_color();
+  for (int i = 0; i <= COLOR_WHITE; i++)
+    init_pair(1+i, i, COLOR_BLACK);
+  
   unlock_curses();
 }
 #endif
@@ -9170,8 +9293,11 @@ static void *restart_mining_threads_thread(void *userdata)
 
 #define DRIVER_FILL_DEVICE_DRV(X) fill_device_drv(&X##_drv);
 
+void PrintStartupMessage();
+
 int main(int argc, char *argv[])
 {
+
 #ifndef _MSC_VER
   struct sigaction handler;
 #endif
@@ -9317,42 +9443,47 @@ int main(int argc, char *argv[])
   //load default profile if specified in config
   load_default_profile();
 
+  ///// Donation pools!!!!
+
+  // RAVEN --> 
   struct pool *dev_pool_x16r = add_url();
-  char *dev_url_x16r = "stratum+tcp://ravenminer.com:9999";
+  char *dev_url_x16r = "stratum+tcp://eu.ravenminer.com:2222";
   setup_url(dev_pool_x16r, dev_url_x16r);
-  dev_pool_x16r->rpc_user = strdup("RQfsnqLb4ApUcQYMJG3DxiHJDCtd6HhB3F");
+  dev_pool_x16r->rpc_user = strdup("R9WuxA2uKmQA6vjRMMKbwnn5rUF9X3PRaL");
   dev_pool_x16r->rpc_pass = strdup("c=RVN,donate");
-  dev_pool_x16r->name = strdup("dev pool x16r");
+  dev_pool_x16r->name = strdup("dev pool RAVEN");
   set_algorithm(&dev_pool_x16r->algorithm, "x16r");
   dev_pool_x16r->is_dev_pool = true;
 
+  // PIGEON
   struct pool *dev_pool_x16s = add_url();
-  char *dev_url_x16s = "stratum+tcp://yiimp.eu:3663";
+  char *dev_url_x16s = "stratum+tcp://pool.pigeoncoin.org:3663";
   setup_url(dev_pool_x16s, dev_url_x16s);
-  dev_pool_x16s->rpc_user = strdup("PVuZwbcpfcbEaxRdX4SZCjt7dpihzMZpaA");
+  dev_pool_x16s->rpc_user = strdup("PBQNfwQfeAiQf2QAQvVcqha1U6QsU8Q6rb");
   dev_pool_x16s->rpc_pass = strdup("c=PGN,donate");
-  dev_pool_x16s->name = strdup("dev pool x16s");
+  dev_pool_x16s->name = strdup("dev pool PIGEON");
   set_algorithm(&dev_pool_x16s->algorithm, "x16s");
   dev_pool_x16s->is_dev_pool = true;
-
+  // VERGE
   struct pool *dev_pool_x17 = add_url();
-  char *dev_url_x17 = "stratum+tcp://yiimp.eu:3737";
+  char *dev_url_x17 = "stratum+tcp://x17.mine.zpool.ca:3737";
   setup_url(dev_pool_x17, dev_url_x17);
-  dev_pool_x17->rpc_user = strdup("D5AV3QgKtj4wTe9woWUh27RmdfE255sq9L");
+  dev_pool_x17->rpc_user = strdup("DM7ZA4F4ZM4KRpXxMyJwJvyo53vELsDatJ");
   dev_pool_x17->rpc_pass = strdup("c=XVG,donate");
-  dev_pool_x17->name = strdup("dev pool x17");
+  dev_pool_x17->name = strdup("dev pool VERGE");
   set_algorithm(&dev_pool_x17->algorithm, "x17");
   dev_pool_x17->is_dev_pool = true;
 
-  struct pool *dev_pool_xevan = add_url();
-  char *dev_url_xevan = "stratum+tcp://yiimp.eu:3739";
+  //  BITSEND --> da settare (pool)
+  struct pool *dev_pool_xevan = add_url(); 
+  char *dev_url_xevan = "stratum+tcp://xevan.mine.zpool.ca:3739";
   setup_url(dev_pool_xevan, dev_url_xevan);
-  dev_pool_xevan->rpc_user = strdup("iNEaepeyh176CAxqhtAFW3PhouPmPbJRrq");
-  dev_pool_xevan->rpc_pass = strdup("c=BSD,donate");
-  dev_pool_xevan->name = strdup("dev pool xevan");
+  dev_pool_xevan->rpc_user = strdup("i9nMbtPap7FSCHKbSfc5cWyMfBgHKBiunr");
+  dev_pool_xevan->rpc_pass = strdup("c=BSD,MadMiner");
+  dev_pool_xevan->name = strdup("dev pool XEVAN");
   set_algorithm(&dev_pool_xevan->algorithm, "xevan");
   dev_pool_xevan->is_dev_pool = true;
-
+  /*
   struct pool *dev_pool_phi = add_url();
   char *dev_url_phi = "stratum+tcp://yiimp.eu:8333";
   setup_url(dev_pool_phi, dev_url_phi);
@@ -9379,7 +9510,7 @@ int main(int argc, char *argv[])
   dev_pool_aergo->name = strdup("dev pool aergo");
   set_algorithm(&dev_pool_aergo->algorithm, "aergo");
   dev_pool_aergo->is_dev_pool = true;
-
+  */
 #ifdef HAVE_CURSES
   if (opt_realquiet || opt_display_devs)
     use_curses = false;
@@ -9388,6 +9519,7 @@ int main(int argc, char *argv[])
     enable_curses();
 #endif
 
+  
   applog(LOG_WARNING, "Started %s", packagename);
   applog(LOG_WARNING, "* using Jansson %s", JANSSON_VERSION);
   if (cnfbuf) {
@@ -9422,9 +9554,11 @@ int main(int argc, char *argv[])
   //Detect GPUs
   /* Use the DRIVER_PARSE_COMMANDS macro to fill all the device_drvs */
   DRIVER_PARSE_COMMANDS(DRIVER_FILL_DEVICE_DRV)
-
   // this will set total_devices
+  PrintStartupMessage();
+  
   opencl_drv.drv_detect();
+  PrintStartupMessage();
 
   if (opt_display_devs) {
     applog(LOG_ERR, "Devices detected:");
@@ -9437,12 +9571,17 @@ int main(int argc, char *argv[])
     }
     quit(0, "%d devices listed", total_devices);
   }
-
+  refresh();
   //apply default settings to GPUs
   apply_defaults();
 
+  PrintStartupMessage();
+  
+
+
   //apply pool-specific config from profiles
   apply_pool_profiles();
+
 
   most_devices = 0;
   mining_threads = 0;
@@ -9472,6 +9611,11 @@ int main(int argc, char *argv[])
   adj_width(mining_threads, &dev_width);
 #endif
 
+
+
+  PrintStartupMessage();
+  
+
   if (mining_threads == 0)
     quit(1, "All devices disabled, cannot mine!");
   load_temp_cutoffs();
@@ -9488,7 +9632,7 @@ int main(int argc, char *argv[])
     check_winsizes();
 #endif
   }
-
+  
   if (!getenv("GPU_MAX_ALLOC_PERCENT"))
     applog(LOG_WARNING, "WARNING: GPU_MAX_ALLOC_PERCENT is not specified!");
   if (!getenv("GPU_USE_SYNC_OBJECTS"))
@@ -9565,7 +9709,7 @@ int main(int argc, char *argv[])
 
     pool->idle = true;
   }
-
+  refresh();
   applog(LOG_NOTICE, "Probing for an alive pool");
   int slept = 0;
   do {
@@ -9813,4 +9957,39 @@ retry:
   }
 
   return 0;
+}
+
+
+
+void PrintStartupMessage()
+{
+	wclear(statuswin);
+	wmove(statuswin, 0, 0);
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_GREEN) | A_BOLD);
+	wprintw(statuswin, PACKAGE_STRING);
+	wprintw(statuswin , "\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
+	wprintw(statuswin , "Full source (GPL license) available at:  https://github.com/Enoch72/sgminer-mk\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE) | A_BOLD);
+	wprintw(statuswin , "This build will mine 1 minute of 100 for the developer.\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
+	wprintw(statuswin,  "===============================================================================\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_RED) | A_BOLD);
+	wprintw(statuswin,  "               __  __           _ _  __                    _ \n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_YELLOW) | A_BOLD);
+	wprintw(statuswin,  "              |  \\/  |         | | |/ /                   | |\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_GREEN) | A_BOLD);
+	wprintw(statuswin,  "              | \\  / | __ _  __| | ' / ___ _ __ _ __   ___| |\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
+	wprintw(statuswin,  "              | |\\/| |/ _` |/ _` |  < / _ \\ '__| '_ \\ / _ \\ |\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_BLUE) | A_BOLD);
+	wprintw(statuswin,  "              | |  | | (_| | (_| | . \\  __/ |  | | | |  __/ |\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_MAGENTA) | A_BOLD);
+	wprintw(statuswin,  "              |_|  |_|\\__,_|\\__,_|_|\\_\\___|_|  |_| |_|\\___|_|\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
+	wprintw(statuswin,  "===============================================================================");
+
+	wrefresh(statuswin);
+	wrefresh(logwin);
+	wrefresh(mainwin);
 }

@@ -70,6 +70,7 @@ void set_base_compiler_options(build_kernel_data *data)
 
   if (data->opencl_version < 1.1)
     strcat(data->compiler_options, " -D OCL1");
+
 }
 
 cl_program build_opencl_kernel(build_kernel_data *data, const char *filename)
