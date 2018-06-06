@@ -9971,7 +9971,8 @@ void PrintStartupMessage()
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
 	wprintw(statuswin , "Full source (GPL license) available at:  https://github.com/Enoch72/sgminer-mk\n");
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE) | A_BOLD);
-	wprintw(statuswin , "This build will mine 1 minute of 100 for the developer.\n");
+	wprintw(statuswin, "This build will mine 1 minute of 100 for the developer.\n");
+	//wprintw(statuswin , "You are using the commercial version. Please read SOURCECODE.txt for details\n");
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
 	wprintw(statuswin,  "===============================================================================\n");
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_RED) | A_BOLD);
