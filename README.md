@@ -1,30 +1,22 @@
-# sgminer-kl x16r/x16s/x17 miner
+# sgminer-MD X16r/X16s/Xevan miner with COLOUR.
+
+![COLOUR](https://github.com/Enoch72/sgminer-MD/blob/master/doc/termcolours.png)
+
+
+**Latest Binary release (Windows/AMD Cards) **: https://github.com/Enoch72/sgminer-MD/releases/latest
 
 
 ## Introduction
 
-An optimized fork of sgminer developed specially for x16r by brianmct, based on Avermore miner.
-
-For now support x16r, x16s, x17 algos
+An optimized fork of sgminer developed specially for X16 by brianmct, based on Avermore miner forked by KL0nLutiy, forked by me .
+For now support very well X16r, X16s and Xevan.
 
 This is a multi-threaded multi-pool GPU miner with AMD GPU monitoring,
 (over)clocking and fanspeed support for scrypt-based cryptocurrency. It is
 based on cgminer by Con Kolivas (ckolivas), which is in turn based on
 cpuminer by Jeff Garzik (jgarzik).
 
-**releases**: https://github.com/KL0nLutiy/sgminer-kl/releases
 
-**git tree**: https://github.com/KL0nLutiy/sgminer-kl
-
-**bugtracker**: https://github.com/KL0nLutiy/sgminer-kl/issues
-
-## Donation addresses
-
-Please consider supporting this project by donating to these addresses (KL0nLutiy):
-
-**ETH**: 0x24366CC7Dd15e6E37C2692eE871803B8983738E6
-
-**RVN**: RQfsnqLb4ApUcQYMJG3DxiHJDCtd6HhB3F
 
 ## Documentation
 
@@ -109,6 +101,7 @@ See `doc/windows-build.txt` for MinGW compilation and cross-compiation,
 `winbuild` Microsoft Visual Studio project (tested on MSVS2010), with
 instructions in `winbuild/README.txt`.
 
+** NOTE: a VisualStudio project is included (winbuild/sgminer.sln). Also many dependencies are included in this repo. 
 
 ## Basic Usage
 
