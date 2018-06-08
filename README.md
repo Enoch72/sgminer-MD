@@ -1,4 +1,4 @@
-# sgminer-MD X16r/X16s/Xevan miner with COLOUR.
+# sgminer-MK X16r/X16s/Xevan miner with COLOUR.
 
 ![COLOUR](https://github.com/Enoch72/sgminer-MD/blob/master/doc/termcolours.png)
 
