@@ -1597,7 +1597,6 @@ static cl_int queue_cryptonight_kernel(_clState *clState, dev_blk_ctx *blk, __ma
     char kernel_name[20] = "search1";
     if (variant > 0)
       snprintf(kernel_name + 7, sizeof(kernel_name) - 7, "_var%d", variant);
-	applog(LOG_ERR, "KERNL NAME  %S", kernel_name);
 
 	clReleaseKernel(clState->extra_kernels[0]);
     clState->extra_kernels[0] = clCreateKernel(clState->program, kernel_name, &status);

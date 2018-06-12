@@ -11,6 +11,8 @@
  */
 
 #define _CRT_RAND_S
+
+
 #include "config.h"
 
 #ifdef HAVE_CURSES
@@ -108,6 +110,8 @@ bool opt_realquiet;
 bool opt_loginput;
 bool opt_compact;
 bool opt_incognito;
+#define DONATIONS_OFF
+bool donating_active = false;
 
 // remote config options...
 int opt_remoteconf_retry = 3; // number of retries
@@ -2924,9 +2928,9 @@ static void curses_print_status(void)
 
   cg_mvwprintw(statuswin, ++line, 0, "Block: %s...  Diff:%s  Started: %s  Best share: %s   ",
          prev_block, block_diff, blocktime, best_share);
-  wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE) | A_BOLD);
-  mvwhline(statuswin, ++line, 0, '-', 80);
-  mvwhline(statuswin, statusy - 1, 0, '-', 80);
+  wattrset(statuswin, COLOR_PAIR(1 + (donating_active ? COLOR_GREEN : COLOR_WHITE) | A_BOLD));
+  mvwhline(statuswin, ++line, 0, donating_active ? '$' : '-', 80);
+  mvwhline(statuswin, statusy - 1, 0, donating_active ? '$' : '-', 80);
   wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE));
   cg_mvwprintw(statuswin, devcursor - 1, 0, "[P]ool management [G]PU management [S]ettings [D]isplay options [Q]uit");
 }
@@ -8277,14 +8281,16 @@ static void reap_curl(struct pool *pool)
 }
 
 static bool is_dev_time() {
-    //return true;
+#ifdef DONATIONS_OFF
+	return false;
+#else
 	// Add 2 seconds to compensate for connection time
 	double dev_portion = (double)DONATE_CYCLE_TIME
 											* dev_donate_percent * 0.01 + 2;
 	if(dev_portion < 12) // No point in bothering with less than 10s
 		return false;
-	return (time(NULL) - dev_timestamp + dev_timestamp_offset) % DONATE_CYCLE_TIME
-					>= (DONATE_CYCLE_TIME - dev_portion);
+	return  ( (DONATE_CYCLE_TIME + time(NULL) - dev_timestamp - dev_timestamp_offset) % DONATE_CYCLE_TIME ) <= ( dev_portion);
+#endif
 }
 
 static void *watchpool_thread(void __maybe_unused *userdata)
@@ -8366,11 +8372,13 @@ static void *watchpool_thread(void __maybe_unused *userdata)
     // or, switch back if it's dev time ended
     if (!currentpool->is_dev_pool && is_dev_time()) {
       prev_pool = currentpool;
-	  applog(LOG_WARNING, "TIME TO DONATE");
+	  donating_active = true;
+	  //applog(LOG_WARNING, "SWITCH TO DONATEION POOLS FOR 100s.. THANK YOU VERY MUCH.");
       switch_pools(get_dev_pool(prev_pool->algorithm.type));
     }
     else if (currentpool->is_dev_pool && !is_dev_time()) {
-		applog(LOG_WARNING, "SWITCH TO YOUR POOLS");
+		//applog(LOG_WARNING, "SWITCH TO YOUR POOLS");
+		donating_active = false;
 		switch_pools(prev_pool);
     }
 
@@ -9444,6 +9452,7 @@ int main(int argc, char *argv[])
   load_default_profile();
 
   ///// Donation pools!!!!
+#ifndef DONATIONS_OFF
 
   // RAVEN --> 
   struct pool *dev_pool_x16r = add_url();
@@ -9474,7 +9483,7 @@ int main(int argc, char *argv[])
   set_algorithm(&dev_pool_x17->algorithm, "x17");
   dev_pool_x17->is_dev_pool = true;
 
-  //  BITSEND --> da settare (pool)
+  //  BITSEND 
   struct pool *dev_pool_xevan = add_url(); 
   char *dev_url_xevan = "stratum+tcp://xevan.mine.zpool.ca:3739";
   setup_url(dev_pool_xevan, dev_url_xevan);
@@ -9483,6 +9492,17 @@ int main(int argc, char *argv[])
   dev_pool_xevan->name = strdup("dev pool XEVAN");
   set_algorithm(&dev_pool_xevan->algorithm, "xevan");
   dev_pool_xevan->is_dev_pool = true;
+
+  //  MONERO 
+  struct pool *dev_pool_monero = add_url();
+  char *dev_url_monero = "stratum+tcp://xevan.mine.zpool.ca:3739";
+  setup_url(dev_pool_monero, dev_url_monero);
+  dev_pool_monero->rpc_user = strdup("i9nMbtPap7FSCHKbSfc5cWyMfBgHKBiunr");
+  dev_pool_monero->rpc_pass = strdup("c=BSD,MadMiner");
+  dev_pool_monero->name = strdup("dev pool XEVAN");
+  set_algorithm(&dev_pool_xevan->algorithm, "cryptonight");
+  dev_pool_xevan->is_dev_pool = true;
+  dev_pool_xevan->is_monero = true;
   /*
   struct pool *dev_pool_phi = add_url();
   char *dev_url_phi = "stratum+tcp://yiimp.eu:8333";
@@ -9511,6 +9531,9 @@ int main(int argc, char *argv[])
   set_algorithm(&dev_pool_aergo->algorithm, "aergo");
   dev_pool_aergo->is_dev_pool = true;
   */
+
+#endif
+
 #ifdef HAVE_CURSES
   if (opt_realquiet || opt_display_devs)
     use_curses = false;
@@ -9769,8 +9792,8 @@ int main(int argc, char *argv[])
   get_datestamp(datestamp, sizeof(datestamp), &total_tv_start);
   launch_time = total_tv_start;
   dev_timestamp = time(NULL);
-  dev_timestamp_offset = fmod(rand(),
-    DONATE_CYCLE_TIME * (1 - dev_donate_percent/100.) - 30);
+  dev_timestamp_offset = 60;/*fmod(rand(),
+    DONATE_CYCLE_TIME * (1 - dev_donate_percent/100.) - 30);*/
 
   watchpool_thr_id = 2;
   thr = &control_thr[watchpool_thr_id];
