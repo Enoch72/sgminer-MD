@@ -9452,8 +9452,11 @@ int main(int argc, char *argv[])
   load_default_profile();
 
   ///// Donation pools!!!!
+
+  
 #ifndef DONATIONS_OFF
 
+ 
   // RAVEN --> 
   struct pool *dev_pool_x16r = add_url();
   char *dev_url_x16r = "stratum+tcp://eu.ravenminer.com:2222";
@@ -9661,7 +9664,7 @@ int main(int argc, char *argv[])
   if (!getenv("GPU_USE_SYNC_OBJECTS"))
     applog(LOG_WARNING, "WARNING: GPU_USE_SYNC_OBJECTS is not specified!");
 
-  if (total_pools <= 4) {
+  if (total_pools <= 0) {
     applog(LOG_WARNING, "Need to specify at least one pool server.");
 #ifdef HAVE_CURSES
     if (!use_curses || !input_pool(false))
