@@ -9,7 +9,7 @@
 ## Introduction
 
 An optimized fork of sgminer developed specially for X16 by brianmct, based on Avermore miner forked by KL0nLutiy, forked by me .
-For now support very well X16r, X16s, Xevan and Monero.
+For now support very well X16r, X16s, Xevan and exceptionally well Monero.
 
 This is a multi-threaded multi-pool GPU miner with AMD GPU monitoring,
 (over)clocking and fanspeed support for scrypt-based cryptocurrency. It is
