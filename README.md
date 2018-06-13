@@ -1,15 +1,15 @@
-# sgminer-MK X16r/X16s/Xevan miner with COLOUR.
+# sgminer-MK X16r/X16s/Xevan/Monero miner with COLOUR.
 
 ![COLOUR](https://github.com/Enoch72/sgminer-MD/blob/master/doc/termcolours.png)
 
 
-**Latest Binary release (Windows/AMD Cards) **: https://github.com/Enoch72/sgminer-MD/releases/latest
+**Latest Binary release (Windows/AMD Cards) **: https://github.com/Enoch72/sgminer-MK/releases/latest
 
 
 ## Introduction
 
 An optimized fork of sgminer developed specially for X16 by brianmct, based on Avermore miner forked by KL0nLutiy, forked by me .
-For now support very well X16r, X16s and Xevan.
+For now support very well X16r, X16s, Xevan and Monero.
 
 This is a multi-threaded multi-pool GPU miner with AMD GPU monitoring,
 (over)clocking and fanspeed support for scrypt-based cryptocurrency. It is
