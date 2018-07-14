@@ -1396,6 +1396,10 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
   int buffersize = BUFFERSIZE;
   unsigned int i;
 
+  LARGE_INTEGER p0, p1, p2, p3, p4;
+  LARGE_INTEGER Frequency;
+
+
   /* Windows' timer resolution is only 15ms so oversample 5x */
   if (gpu->dynamic && (++gpu->intervals * dynamic_us) > 70000) {
     struct timeval tv_gpuend;
@@ -1504,8 +1508,11 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
       }
     }
     
-    clFinish(clState->commandQueue);
-    
+	if (opt_benchmark) { 
+	  clFinish(clState->commandQueue); 
+	  QueryPerformanceCounter(&p0); 
+	}
+
     // Main CN P0
     status = clEnqueueNDRangeKernel(clState->commandQueue, clState->kernel, 2, Nonce, gthreads, lthreads, 0, NULL, NULL);
     
@@ -1513,15 +1520,31 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
       applog(LOG_ERR, "Error %d while attempting to enqueue kernel 0.", status);
       return -1;
     }
+	
+	if (opt_benchmark) {
+		clFinish(clState->commandQueue);
+		QueryPerformanceCounter(&p1);
+	}
     
-    // Main CN P1
-    status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[0], 1, p_global_work_offset, globalThreads, localThreads, 0, NULL, NULL);
-    
+	// Main CN P1
+	status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[0], 1, p_global_work_offset, globalThreads, localThreads, 0, NULL, NULL);
+	/*
+	size_t search_local_size = 64;
+	size_t search_global_size = search_local_size / localThreads[0] * GlobalThreads;
+	applog(LOG_ERR, "Kernel enqueued dimensions offset: %d global %d  - local: %d", *p_global_work_offset,search_global_size, search_local_size);
+	status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[0], 1, p_global_work_offset, &search_global_size, &search_local_size, 0, NULL, NULL);
+	*/
+
     if (status != CL_SUCCESS) {
       applog(LOG_ERR, "Error %d while attempting to enqueue kernel 1.", status);
       return -1;
     }
-    
+	
+	if (opt_benchmark) {
+		clFinish(clState->commandQueue);
+		QueryPerformanceCounter(&p2);
+	}
+
     // Main CN P2
     status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[1], 2, Nonce, gthreads, lthreads, 0, NULL, NULL);
     
@@ -1529,11 +1552,18 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
       applog(LOG_ERR, "Error %d while attempting to enqueue kernel 2.", status);
       return -1;
     }
+
+	if (opt_benchmark) {
+		clFinish(clState->commandQueue);
+		QueryPerformanceCounter(&p3);
+	}
+
+	
     
     // Read BranchBuf counters
     
     for (int i = 0; i < 4; ++i) {
-      status = clEnqueueReadBuffer(clState->commandQueue, clState->BranchBuffer[i], CL_FALSE, sizeof(cl_uint) * GlobalThreads, sizeof(cl_uint), BranchBufCount + i, 0, NULL, NULL);
+		status = clEnqueueReadBuffer(clState->commandQueue, clState->BranchBuffer[i], CL_FALSE, sizeof(cl_uint) * GlobalThreads, sizeof(cl_uint), BranchBufCount + i, 0, NULL, NULL);
       
       if(status != CL_SUCCESS) {
         applog(LOG_ERR, "Error %d while attempting to read branch buffer counter %d.", status, i);
@@ -1556,17 +1586,31 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
         }
         
         // Make it a multiple of the local worksize (some drivers will otherwise shit a brick)
-        BranchBufCount[i] += (clState->wsize - (BranchBufCount[i] & (clState->wsize - 1)));
-        
-        status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[i + 2], 1, p_global_work_offset, BranchBufCount + i, localThreads, 0, NULL, NULL);
-        
+		BranchBufCount[i] += (clState->wsize - (BranchBufCount[i] & (clState->wsize - 1)));
+
+		status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[i + 2], 1, p_global_work_offset, BranchBufCount + i, localThreads, 0, NULL, NULL);
+
         if (status != CL_SUCCESS) {
           applog(LOG_ERR, "Error %d while attempting to enqueue kernel %d.", status, i + 2);
           return -1;
         }
       }
     }
-  }
+
+	if (opt_benchmark) {
+		QueryPerformanceFrequency(&Frequency);
+		QueryPerformanceCounter(&p4);
+		p0.QuadPart = (p1.QuadPart - p0.QuadPart) * 1000000 / Frequency.QuadPart;
+		p1.QuadPart = (p2.QuadPart - p1.QuadPart) * 1000000 / Frequency.QuadPart;
+		p2.QuadPart = (p3.QuadPart - p2.QuadPart) * 1000000 / Frequency.QuadPart;
+		p3.QuadPart = (p4.QuadPart - p3.QuadPart) * 1000000 / Frequency.QuadPart;
+		p4.QuadPart = p0.QuadPart + p1.QuadPart + p2.QuadPart + p3.QuadPart;
+
+		
+		applog(LOG_NOTICE, "P0:%d  P1:%d   P2:%d   P3:%d  TOT:%d", (uint32_t)p0.QuadPart, (uint32_t)p1.QuadPart, (uint32_t)p2.QuadPart, (uint32_t)p3.QuadPart, (uint32_t)p4.QuadPart);
+	}
+
+  }  // Cryptonight end bracket
   else if (thrdata->enqueue_kernels) {
 	status = thrdata->enqueue_kernels(clState, p_global_work_offset, globalThreads, localThreads);
 	if (unlikely(status != CL_SUCCESS))
@@ -1593,6 +1637,8 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
     }
   }
   
+  clFlush(clState->commandQueue);
+
   status = clEnqueueReadBuffer(clState->commandQueue, clState->outputBuffer, CL_FALSE, 0,
     buffersize, thrdata->res, 0, NULL, NULL);
   if (unlikely(status != CL_SUCCESS)) {

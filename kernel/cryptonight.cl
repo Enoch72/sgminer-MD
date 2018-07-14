@@ -6,7 +6,7 @@
 #define sph_s64 long
 
 #ifndef WORKSIZE
-#define WORKSIZE 8
+#define WORKSIZE 4
 #endif
 
 #include "wolf-aes.cl"
@@ -32,11 +32,17 @@
 #define VARIANT1_2(p) \
     (p) ^= tweak1_2
 
+
+// tweak1_2.s1 = global_id; 
+
 #define VARIANT1_INIT() \
     uint2 tweak1_2; \
     tweak1_2.s0 = tweak1; \
     tweak1_2.s1 = get_global_id(0); \
     tweak1_2 ^= as_uint2(states[24]);
+	
+#define IDX(x)	((x) * global_size )
+
 
 static const __constant ulong keccakf_rndc[24] = 
 {
@@ -218,7 +224,7 @@ void AESExpandKey256(uint *keybuf)
 	for(uint c = 8, i = 1; c < 60; ++c)
 	{
 		// For 256-bit keys, an sbox permutation is done every other 4th uint generated, AND every 8th
-		uint t = ((!(c & 7)) || ((c & 7) == 4)) ? SubWord(keybuf[c - 1]) : keybuf[c - 1];
+		uint t = ((!(c & 3)) || ((c & 7) == 4)) ? SubWord(keybuf[c - 1]) : keybuf[c - 1];
 		
 		// If the uint we're generating has an index that is a multiple of 8, rotate and XOR with the round constant,
 		// then XOR this with previously generated uint. If it's 4 after a multiple of 8, only the sbox permutation
@@ -227,20 +233,19 @@ void AESExpandKey256(uint *keybuf)
 	}
 }
 
-#define IDX(x)	((x) * (get_global_size(0)))
 
-__attribute__((reqd_work_group_size(WORKSIZE, 8, 1)))
+//__attribute__((reqd_work_group_size(WORKSIZE, 8, 1)))
 __kernel void search(__global ulong *input, uint InputLen, __global uint4 *Scratchpad, __global ulong *states)
 {
 	ulong State[25];
 	uint ExpandedKey1[64];
 	__local uint AES0[256], AES1[256], AES2[256], AES3[256];
 	uint4 text;
-	
+	uint global_size = get_global_size(0);
 	states += (25 * (get_global_id(0) - get_global_offset(0)));
 	Scratchpad += ((get_global_id(0) - get_global_offset(0)));
 	
-	for(int i = get_local_id(0); i < 256; i += WORKSIZE)
+	for(int i = get_local_id(0); i < 256; i += get_local_size(0))
 	{
 		const uint tmp = AES0_C[i];
 		AES0[i] = tmp;
@@ -296,12 +301,14 @@ __kernel void search(__global ulong *input, uint InputLen, __global uint4 *Scrat
 		Scratchpad[IDX((i << 3) + get_local_id(1))] = text;
 	}
 }
+#ifndef WAVE64
 
 #define SEARCH1(VAR) \
 __attribute__((reqd_work_group_size(WORKSIZE, 1, 1))) \
 __kernel void search1_var##VAR(__global uint4 *Scratchpad, __global ulong *states VARIANT##VAR##_PARAMS) \
 { \
 	uint4 a, b; \
+	uint global_size = get_global_size(0);\
 	__local uint AES0[256], AES1[256], AES2[256], AES3[256]; \
 	\
 	Scratchpad += ((get_global_id(0) - get_global_offset(0))); \
@@ -356,22 +363,93 @@ __kernel void search1_var##VAR(__global uint4 *Scratchpad, __global ulong *state
 	} \
 }
 
+#else
+
+#define SEARCH1(VAR) \
+__attribute__((reqd_work_group_size(64, 1, 1))) \
+__kernel void search1_var##VAR(__global uint4 *Scratchpad, __global ulong *states VARIANT##VAR##_PARAMS) \
+{ \
+	uint4 a, b; \
+	__local uint AES0[256], AES1[256], AES2[256], AES3[256]; \
+	\
+	const uint WS = WORKSIZE / 2 ;\
+    const uint global_size = get_global_size(0) / (64 / WORKSIZE) ;\ 
+    uint thread_id = get_global_id(0)-get_global_offset(0);\
+	uint local_id  = thread_id % 32;\
+	uint global_id = get_global_offset(0) +  thread_id / 32 * WS + local_id;\
+	bool ExecMask  = local_id<WS;\
+	\
+	for(int i = get_local_id(0); i < 256; i += get_local_size(0)) \
+	{ \
+		const uint tmp = AES0_C[i]; \
+		AES0[i] = tmp; \
+		AES1[i] = rotate(tmp, 8U); \
+		AES2[i] = rotate(tmp, 16U); \
+		AES3[i] = rotate(tmp, 24U); \
+	} \
+	\
+	barrier(CLK_LOCAL_MEM_FENCE); \
+	\
+	if (ExecMask) \
+	{\
+	Scratchpad += global_id; \
+	states     += (25 * global_id); \
+	\
+	a.s01 = as_uint2(states[0] ^ states[4]); \
+	b.s01 = as_uint2(states[2] ^ states[6]); \
+	a.s23 = as_uint2(states[1] ^ states[5]); \
+	b.s23 = as_uint2(states[3] ^ states[7]); \
+	\
+	uint4 b_x = b; \
+	VARIANT##VAR##_INIT(); \
+	\
+	_Pragma("unroll 8") \
+	for (int i = 0; i < 0x80000; ++i) \
+	{ \
+		uint4 c; \
+		\
+		c = Scratchpad[IDX((a.s0 & 0x1FFFF0) >> 4)]; \
+		c = AES_Round(AES0, AES1, AES2, AES3, c, a); \
+		\
+		b_x ^= c; \
+		VARIANT##VAR##_1(b_x); \
+		\
+		Scratchpad[IDX((a.s0 & 0x1FFFF0) >> 4)] = b_x; \
+		\
+		uint4 tmp; \
+		tmp = Scratchpad[IDX((c.s0 & 0x1FFFF0) >> 4)]; \
+		\
+		a.s23 = as_uint2(as_ulong(a.s23) +        as_ulong(c.s01) * as_ulong(tmp.s01)); \
+		a.s01 = as_uint2(as_ulong(a.s01) + mul_hi(as_ulong(c.s01),  as_ulong(tmp.s01))); \
+		\
+		VARIANT##VAR##_2(a.s23); \
+		Scratchpad[IDX((c.s0 & 0x1FFFF0) >> 4)] = a; \
+		VARIANT##VAR##_2(a.s23); \
+		\
+		a ^= tmp; \
+		\
+		b_x = c; \
+	} \
+ }\
+}
+#endif
+
 #define search1_var0 search1
 SEARCH1(0)
 SEARCH1(1)
 
-__attribute__((reqd_work_group_size(WORKSIZE, 8, 1)))
+//__attribute__((reqd_work_group_size(WORKSIZE, 8, 1)))
 __kernel void search2(__global uint4 *Scratchpad, __global ulong *states, __global uint *Branch0, __global uint *Branch1, __global uint *Branch2, __global uint *Branch3)
 {
 	__local uint AES0[256], AES1[256], AES2[256], AES3[256];
 	uint ExpandedKey2[64];
 	ulong State[25];
 	uint4 text;
-	
+	uint global_size = get_global_size(0);
 	Scratchpad += ((get_global_id(0) - get_global_offset(0)));
 	states += (25 * (get_global_id(0) - get_global_offset(0)));
 	
-	for(int i = get_local_id(0); i < 256; i += WORKSIZE)
+	for(int i = get_local_id(0); i < 256; i += get_local_size(0))
 	{
 		const uint tmp = AES0_C[i];
 		AES0[i] = tmp;
