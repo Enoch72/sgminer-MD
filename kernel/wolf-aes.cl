@@ -82,6 +82,11 @@ uint4 AES_Round(const __local uint *AES0, const __local uint *AES1, const __loca
     Y.s3 = AES0[BYTE(X.s3, 0)] ^ AES1[BYTE(X.s0, 1)] ^ AES2[BYTE(X.s1, 2)] ^ AES3[BYTE(X.s2, 3)];
     Y ^= key;
     return(Y);
-}
+}                                                 
+        
+		
+		
+		
+		
 
 #endif

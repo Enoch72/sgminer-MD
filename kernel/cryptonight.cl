@@ -338,23 +338,39 @@ __kernel void search1_var##VAR(__global uint4 *Scratchpad, __global ulong *state
 	for (int i = 0; i < 0x80000; ++i) \
 	{ \
 		uint4 c; \
+		uint4  c0;\
+		bool equal;\
+		c = Scratchpad[IDX((a.s0 & 0x1FFFF0) >> 4)]; \
+		uint4 tmp;\
+		c0.s0  = AES0[BYTE(c.s0, 0)] ^ AES1[BYTE(c.s1, 1)] ^ AES2[BYTE(c.s2, 2)] ^ AES3[BYTE(c.s3, 3)] ^ a.s0;\
+		equal  = (c0.s0 & 0x1FFFF0) == (a.s0 & 0x1FFFF0) ;\
+		if (equal)\
+		{\
+		 c0.s1  = AES0[BYTE(c.s1, 0)] ^ AES1[BYTE(c.s2, 1)] ^ AES2[BYTE(c.s3, 2)] ^ AES3[BYTE(c.s0, 3)] ^ a.s1;\
+		 c0.s2  = AES0[BYTE(c.s2, 0)] ^ AES1[BYTE(c.s3, 1)] ^ AES2[BYTE(c.s0, 2)] ^ AES3[BYTE(c.s1, 3)] ^ a.s2;\
+		 c0.s3  = AES0[BYTE(c.s3, 0)] ^ AES1[BYTE(c.s0, 1)] ^ AES2[BYTE(c.s1, 2)] ^ AES3[BYTE(c.s2, 3)] ^ a.s3;\
+		 c  = c0;\
+		 b_x ^= c; \
+		 VARIANT##VAR##_1(b_x); \
+		 tmp = b_x;\
+		} else\
+		{\
+		 tmp    = Scratchpad[IDX((c0.s0 & 0x1FFFF0) >> 4)]; \
+		 c0.s1  = AES0[BYTE(c.s1, 0)] ^ AES1[BYTE(c.s2, 1)] ^ AES2[BYTE(c.s3, 2)] ^ AES3[BYTE(c.s0, 3)] ^ a.s1;\
+		 c0.s2  = AES0[BYTE(c.s2, 0)] ^ AES1[BYTE(c.s3, 1)] ^ AES2[BYTE(c.s0, 2)] ^ AES3[BYTE(c.s1, 3)] ^ a.s2;\
+		 c0.s3  = AES0[BYTE(c.s3, 0)] ^ AES1[BYTE(c.s0, 1)] ^ AES2[BYTE(c.s1, 2)] ^ AES3[BYTE(c.s2, 3)] ^ a.s3;\
+		 c  = c0;\
+		 b_x ^= c; \
+		 VARIANT##VAR##_1(b_x); \
+		} \
 		\
-		c = Scratchpad[IDX((as_ulong(a.s01) & 0x1FFFF0) >> 4)]; \
-		c = AES_Round(AES0, AES1, AES2, AES3, c, a); \
-		\
-		b_x ^= c; \
-		VARIANT##VAR##_1(b_x); \
-		\
-		Scratchpad[IDX((as_ulong(a.s01) & 0x1FFFF0) >> 4)] = b_x; \
-		\
-		uint4 tmp; \
-		tmp = Scratchpad[IDX((as_ulong(c.s01) & 0x1FFFF0) >> 4)]; \
+		Scratchpad[IDX((a.s0 & 0x1FFFF0) >> 4)] = b_x; \
 		\
 		a.s23 = as_uint2(as_ulong(a.s23) +        as_ulong(c.s01) * as_ulong(tmp.s01)); \
 		a.s01 = as_uint2(as_ulong(a.s01) + mul_hi(as_ulong(c.s01),  as_ulong(tmp.s01))); \
 		\
 		VARIANT##VAR##_2(a.s23); \
-		Scratchpad[IDX((as_ulong(c.s01) & 0x1FFFF0) >> 4)] = a; \
+		Scratchpad[IDX((c.s0 & 0x1FFFF0) >> 4)] = a; \
 		VARIANT##VAR##_2(a.s23); \
 		\
 		a ^= tmp; \
@@ -403,7 +419,7 @@ __kernel void search1_var##VAR(__global uint4 *Scratchpad, __global ulong *state
 	uint4 b_x = b; \
 	VARIANT##VAR##_INIT(); \
 	\
-	_Pragma("unroll 8") \
+	_Pragma("unroll 1") \
 	for (int i = 0; i < 0x80000; ++i) \
 	{ \
 		uint4 c; \
