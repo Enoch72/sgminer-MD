@@ -154,6 +154,24 @@ static void append_ethash_compiler_options(struct _build_kernel_data *data, stru
 #endif
 }
 
+static void append_cryptonight_compiler_options(struct _build_kernel_data *data, struct cgpu_info *cgpu, struct _algorithm_t *algorithm)
+{
+	
+	if (opt_all_in_one)
+	{
+		strcat(data->compiler_options, " -D ALL_IN_ONE");
+	}
+	if (cgpu->rawintensity)
+	{
+		char buf[255];
+		sprintf(buf, " -D GLOBAL_SIZE=%d", cgpu->rawintensity);
+	    strcat(data->compiler_options, buf);
+		sprintf(buf, "%d", cgpu->rawintensity);
+		strcat(data->binary_filename, buf);
+	}
+
+}
+
 static void append_neoscrypt_compiler_options(struct _build_kernel_data *data, struct cgpu_info *cgpu, struct _algorithm_t *algorithm)
 {
   char buf[255];
@@ -1597,7 +1615,6 @@ static cl_int queue_cryptonight_kernel(_clState *clState, dev_blk_ctx *blk, __ma
     char kernel_name[20] = "search1";
     if (variant > 0)
       snprintf(kernel_name + 7, sizeof(kernel_name) - 7, "_var%d", variant);
-	applog(LOG_ERR, "KERNL NAME  %S", kernel_name);
 
 	clReleaseKernel(clState->extra_kernels[0]);
     clState->extra_kernels[0] = clCreateKernel(clState->program, kernel_name, &status);
@@ -1616,21 +1633,35 @@ static cl_int queue_cryptonight_kernel(_clState *clState, dev_blk_ctx *blk, __ma
   CL_SET_ARG(blk->work->XMRBlobLen);
   CL_SET_ARG(clState->Scratchpads);
   CL_SET_ARG(clState->States);
+  
+  if (opt_all_in_one)
+  {
+	  if (variant > 0)
+		  CL_SET_ARG(*(cl_uint*)(clState->cldata + 35));
+	  CL_SET_ARG(clState->BranchBuffer[0]);
+	  CL_SET_ARG(clState->BranchBuffer[1]);
+	  CL_SET_ARG(clState->BranchBuffer[2]);
+	  CL_SET_ARG(clState->BranchBuffer[3]);
+	  kernel = clState->extra_kernels+1;
+  }
+  else
+  {
 
-  num = 0;
-  kernel = clState->extra_kernels;
-  CL_SET_ARG(clState->Scratchpads);
-  CL_SET_ARG(clState->States);
-  if (variant > 0)
-	  CL_SET_ARG(*(cl_uint*)(clState->cldata + 35));
+	  num = 0;
+	  kernel = clState->extra_kernels;
+	  CL_SET_ARG(clState->Scratchpads);
+	  CL_SET_ARG(clState->States);
+	  if (variant > 0)
+		  CL_SET_ARG(*(cl_uint*)(clState->cldata + 35));
 
-  num = 0;
-  CL_NEXTKERNEL_SET_ARG(clState->Scratchpads);
-  CL_SET_ARG(clState->States);
-  CL_SET_ARG(clState->BranchBuffer[0]);
-  CL_SET_ARG(clState->BranchBuffer[1]);
-  CL_SET_ARG(clState->BranchBuffer[2]);
-  CL_SET_ARG(clState->BranchBuffer[3]);
+	  num = 0;
+	  CL_NEXTKERNEL_SET_ARG(clState->Scratchpads);
+	  CL_SET_ARG(clState->States);
+	  CL_SET_ARG(clState->BranchBuffer[0]);
+	  CL_SET_ARG(clState->BranchBuffer[1]);
+	  CL_SET_ARG(clState->BranchBuffer[2]);
+	  CL_SET_ARG(clState->BranchBuffer[3]);
+  }
 
   num = 0;
   CL_NEXTKERNEL_SET_ARG(clState->States);
@@ -1820,7 +1851,7 @@ static algorithm_settings_t algos[] = {
   { "ethash-genoil", ALGO_ETHASH,   "", 0x100010001LLU, 0x100010001LLU, 0x100010001LLU, 0, 0, 0xFF, 0xFFFF000000000000ULL, 72UL, 0, 128, 0, ethash_regenhash, NULL, NULL, queue_ethash_kernel, gen_hash, append_ethash_compiler_options },
   { "ethash-new",    ALGO_ETHASH,   "", 0x100010001LLU, 0x100010001LLU, 0x100010001LLU, 0, 0, 0xFF, 0xFFFF000000000000ULL, 72UL, 0, 128, 0, ethash_regenhash, NULL, NULL, queue_ethash_kernel, gen_hash, append_ethash_compiler_options },
 
-  { "cryptonight", ALGO_CRYPTONIGHT, "", 1, 0x100010001LLU, 0x100010001LLU, 0, 0, 0xFF, 0xFFFFULL, 0x0000ffffUL, 6, 0, 0, cryptonight_regenhash, NULL, NULL, queue_cryptonight_kernel, gen_hash, NULL },
+  { "cryptonight", ALGO_CRYPTONIGHT, "", 1, 0x100010001LLU, 0x100010001LLU, 0, 0, 0xFF, 0xFFFFULL, 0x0000ffffUL, 6, 0, 0, cryptonight_regenhash, NULL, NULL, queue_cryptonight_kernel, gen_hash, append_cryptonight_compiler_options },
 
   { "equihash",     ALGO_EQUIHASH,   "", 1, (1ULL << 28), (1ULL << 28), 0, 0, 0x20000, 0xFFFF000000000000ULL, 0x00000000UL, 0, 128, 0, equihash_regenhash, NULL, NULL, queue_equihash_kernel, gen_hash, append_equihash_compiler_options },
 

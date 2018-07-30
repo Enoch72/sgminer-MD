@@ -1396,6 +1396,10 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
   int buffersize = BUFFERSIZE;
   unsigned int i;
 
+  LARGE_INTEGER p0, p1, p2, p3, p4;
+  LARGE_INTEGER Frequency;
+
+
   /* Windows' timer resolution is only 15ms so oversample 5x */
   if (gpu->dynamic && (++gpu->intervals * dynamic_us) > 70000) {
     struct timeval tv_gpuend;
@@ -1478,6 +1482,8 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
   }
   // if (algorithm.type == ALGO_ETHASH) read lock gpu->eth_dag.lock has to be released
   
+
+
   if(gpu->algorithm.type == ALGO_CRYPTONIGHT) {
     mutex_lock(&work->pool->XMRGlobalNonceLock);
     work->blk.nonce = work->pool->XMRGlobalNonce;
@@ -1490,7 +1496,7 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
     p_global_work_offset = &global_work_offset;
   
   if (gpu->algorithm.type == ALGO_CRYPTONIGHT) {
-    size_t GlobalThreads = *globalThreads, Nonce[2] = { (size_t)work->blk.nonce, 1}, gthreads[2] = { *globalThreads, 8 }, lthreads[2] = { *localThreads, 8 };
+    size_t GlobalThreads = *globalThreads, Nonce[3] = { (size_t)work->blk.nonce, 0,0}, gthreads[3] = { *globalThreads, 8,4 }, lthreads[3] = { *localThreads, 8,4 };
     size_t BranchBufCount[4] = { 0, 0, 0, 0 };
     
     for (int i = 0; i < 4; ++i) {
@@ -1504,36 +1510,69 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
       }
     }
     
-    clFinish(clState->commandQueue);
-    
+	if (opt_benchmark) { 
+	  clFinish(clState->commandQueue); 
+	  QueryPerformanceCounter(&p0); 
+	}
+
     // Main CN P0
+	if (opt_worksizes[0])
+	    lthreads[0] = opt_worksizes[0];
+	
     status = clEnqueueNDRangeKernel(clState->commandQueue, clState->kernel, 2, Nonce, gthreads, lthreads, 0, NULL, NULL);
     
     if (status != CL_SUCCESS) {
       applog(LOG_ERR, "Error %d while attempting to enqueue kernel 0.", status);
       return -1;
     }
+	
+	if (opt_benchmark) {
+		clFinish(clState->commandQueue);
+		QueryPerformanceCounter(&p1);
+	}
     
-    // Main CN P1
-    status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[0], 1, p_global_work_offset, globalThreads, localThreads, 0, NULL, NULL);
-    
-    if (status != CL_SUCCESS) {
-      applog(LOG_ERR, "Error %d while attempting to enqueue kernel 1.", status);
-      return -1;
-    }
-    
-    // Main CN P2
-    status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[1], 2, Nonce, gthreads, lthreads, 0, NULL, NULL);
-    
-    if (status != CL_SUCCESS) {
-      applog(LOG_ERR, "Error %d while attempting to enqueue kernel 2.", status);
-      return -1;
-    }
+	
+	if (!opt_all_in_one)
+	{
+		// Main CN P1
+
+		if (opt_worksizes[1])
+			lthreads[0] = opt_worksizes[1];
+
+		status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[0], 1, p_global_work_offset, gthreads, lthreads, 0, NULL, NULL);
+
+		if (status != CL_SUCCESS) {
+			applog(LOG_ERR, "Error %d while attempting to enqueue kernel 1.", status);
+			return -1;
+		}
+
+		if (opt_benchmark) {
+			clFinish(clState->commandQueue);
+			QueryPerformanceCounter(&p2);
+		}
+
+		// Main CN P2
+		if (opt_worksizes[2])
+			lthreads[0] = opt_worksizes[2];
+
+		status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[1], 2, Nonce, gthreads, lthreads, 0, NULL, NULL);
+
+		if (status != CL_SUCCESS) {
+			applog(LOG_ERR, "Error %d while attempting to enqueue kernel 2.", status);
+			return -1;
+		}
+
+	}
+
+	if (opt_benchmark) {
+		clFinish(clState->commandQueue);
+		QueryPerformanceCounter(&p3);
+	}
     
     // Read BranchBuf counters
     
     for (int i = 0; i < 4; ++i) {
-      status = clEnqueueReadBuffer(clState->commandQueue, clState->BranchBuffer[i], CL_FALSE, sizeof(cl_uint) * GlobalThreads, sizeof(cl_uint), BranchBufCount + i, 0, NULL, NULL);
+		status = clEnqueueReadBuffer(clState->commandQueue, clState->BranchBuffer[i], CL_FALSE, sizeof(cl_uint) * GlobalThreads, sizeof(cl_uint), BranchBufCount + i, 0, NULL, NULL);
       
       if(status != CL_SUCCESS) {
         applog(LOG_ERR, "Error %d while attempting to read branch buffer counter %d.", status, i);
@@ -1556,17 +1595,31 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
         }
         
         // Make it a multiple of the local worksize (some drivers will otherwise shit a brick)
-        BranchBufCount[i] += (clState->wsize - (BranchBufCount[i] & (clState->wsize - 1)));
-        
-        status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[i + 2], 1, p_global_work_offset, BranchBufCount + i, localThreads, 0, NULL, NULL);
-        
+		BranchBufCount[i] += (clState->wsize - (BranchBufCount[i] & (clState->wsize - 1)));
+
+		status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[i + 2], 1, p_global_work_offset, BranchBufCount + i, localThreads, 0, NULL, NULL);
+
         if (status != CL_SUCCESS) {
           applog(LOG_ERR, "Error %d while attempting to enqueue kernel %d.", status, i + 2);
           return -1;
         }
       }
     }
-  }
+
+	if (opt_benchmark) {
+		QueryPerformanceFrequency(&Frequency);
+		QueryPerformanceCounter(&p4);
+		p0.QuadPart = (p1.QuadPart - p0.QuadPart) * 1000000 / Frequency.QuadPart;
+		p1.QuadPart = (p2.QuadPart - p1.QuadPart) * 1000000 / Frequency.QuadPart;
+		p2.QuadPart = (p3.QuadPart - p2.QuadPart) * 1000000 / Frequency.QuadPart;
+		p3.QuadPart = (p4.QuadPart - p3.QuadPart) * 1000000 / Frequency.QuadPart;
+		p4.QuadPart = p0.QuadPart + p1.QuadPart + p2.QuadPart + p3.QuadPart;
+
+		
+		applog(LOG_NOTICE, "CN0:%d  CN1:%d   CN2:%d   CN4:%d  TOT:%d", (uint32_t)p0.QuadPart, (uint32_t)p1.QuadPart, (uint32_t)p2.QuadPart, (uint32_t)p3.QuadPart, (uint32_t)p4.QuadPart);
+	}
+
+  }  // Cryptonight end bracket
   else if (thrdata->enqueue_kernels) {
 	status = thrdata->enqueue_kernels(clState, p_global_work_offset, globalThreads, localThreads);
 	if (unlikely(status != CL_SUCCESS))
@@ -1593,6 +1646,8 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
     }
   }
   
+  clFlush(clState->commandQueue);
+
   status = clEnqueueReadBuffer(clState->commandQueue, clState->outputBuffer, CL_FALSE, 0,
     buffersize, thrdata->res, 0, NULL, NULL);
   if (unlikely(status != CL_SUCCESS)) {

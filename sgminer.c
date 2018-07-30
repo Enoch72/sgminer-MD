@@ -11,6 +11,8 @@
  */
 
 #define _CRT_RAND_S
+
+
 #include "config.h"
 
 #ifdef HAVE_CURSES
@@ -108,6 +110,8 @@ bool opt_realquiet;
 bool opt_loginput;
 bool opt_compact;
 bool opt_incognito;
+#define DONATIONS_OFF
+bool donating_active = false;
 
 // remote config options...
 int opt_remoteconf_retry = 3; // number of retries
@@ -200,6 +204,9 @@ uint8_t opt_benchmark_seq[17] = {
   0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7,
   0x8, 0x9, 0xA, 0xB, 0xC, 0xD, 0xE, 0xF
 };
+
+bool opt_all_in_one = false;
+uint8_t opt_worksizes[64] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 
 #define QUIET (opt_quiet || opt_realquiet)
 
@@ -1451,6 +1458,23 @@ char *set_benchmark_sequence(char *arg)
       opt_benchmark_seq[i] = arg[i] - '0';
   }
   opt_benchmark = true;
+  return NULL;
+}
+
+
+char *set_worksizes_sequence(char *arg)
+{
+	if (!(arg && arg[0]))
+		return "Invalid parameter for set worksize sequence";
+	uint i;
+	for (i = 0; i < strlen(arg); i++) {
+	
+		if ( !('0' <= arg[i] <= '8') )
+			return "Invalid worksize digit in sequence (valid values are :0--8)";
+		if (arg[i] > '0')
+			opt_worksizes[i] = pow(2.0, arg[i] - '0');
+	}
+	return NULL;
 }
 
 /* These options are available from config file or commandline */
@@ -1625,6 +1649,14 @@ struct opt_table opt_config_table[] = {
       "Hardcode the hash order in x16r/x16s"
       " for benchmarking purposes. Must be an uppercase hex string"
       "of length 16"),
+  // INtroduced with Monero SDK
+  OPT_WITH_ARG("--worksizes",
+	  set_worksizes_sequence, NULL, NULL,
+	  "Set the worksize sequence for multiple kernels."
+	  "Actually works only on Cryptonights algo"),
+ OPT_WITHOUT_ARG("--all-in-one-kernel",
+	  opt_set_bool, &opt_all_in_one,
+	  "Build and uses a single kenel instead of a sequence. Valid only for Cryptonights algo"),
 #ifdef HAVE_CURSES
   OPT_WITHOUT_ARG("--incognito",
       opt_set_bool, &opt_incognito,
@@ -2924,9 +2956,9 @@ static void curses_print_status(void)
 
   cg_mvwprintw(statuswin, ++line, 0, "Block: %s...  Diff:%s  Started: %s  Best share: %s   ",
          prev_block, block_diff, blocktime, best_share);
-  wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE) | A_BOLD);
-  mvwhline(statuswin, ++line, 0, '-', 80);
-  mvwhline(statuswin, statusy - 1, 0, '-', 80);
+  wattrset(statuswin, COLOR_PAIR(1 + (donating_active ? COLOR_GREEN : COLOR_WHITE) | A_BOLD));
+  mvwhline(statuswin, ++line, 0, donating_active ? '$' : '-', 80);
+  mvwhline(statuswin, statusy - 1, 0, donating_active ? '$' : '-', 80);
   wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE));
   cg_mvwprintw(statuswin, devcursor - 1, 0, "[P]ool management [G]PU management [S]ettings [D]isplay options [Q]uit");
 }
@@ -8277,14 +8309,16 @@ static void reap_curl(struct pool *pool)
 }
 
 static bool is_dev_time() {
-    //return true;
+#ifdef DONATIONS_OFF
+	return false;
+#else
 	// Add 2 seconds to compensate for connection time
 	double dev_portion = (double)DONATE_CYCLE_TIME
 											* dev_donate_percent * 0.01 + 2;
 	if(dev_portion < 12) // No point in bothering with less than 10s
 		return false;
-	return (time(NULL) - dev_timestamp + dev_timestamp_offset) % DONATE_CYCLE_TIME
-					>= (DONATE_CYCLE_TIME - dev_portion);
+	return  ( (DONATE_CYCLE_TIME + time(NULL) - dev_timestamp - dev_timestamp_offset) % DONATE_CYCLE_TIME ) <= ( dev_portion);
+#endif
 }
 
 static void *watchpool_thread(void __maybe_unused *userdata)
@@ -8366,11 +8400,13 @@ static void *watchpool_thread(void __maybe_unused *userdata)
     // or, switch back if it's dev time ended
     if (!currentpool->is_dev_pool && is_dev_time()) {
       prev_pool = currentpool;
-	  applog(LOG_WARNING, "TIME TO DONATE");
+	  donating_active = true;
+	  //applog(LOG_WARNING, "SWITCH TO DONATEION POOLS FOR 100s.. THANK YOU VERY MUCH.");
       switch_pools(get_dev_pool(prev_pool->algorithm.type));
     }
     else if (currentpool->is_dev_pool && !is_dev_time()) {
-		applog(LOG_WARNING, "SWITCH TO YOUR POOLS");
+		//applog(LOG_WARNING, "SWITCH TO YOUR POOLS");
+		donating_active = false;
 		switch_pools(prev_pool);
     }
 
@@ -9445,6 +9481,10 @@ int main(int argc, char *argv[])
 
   ///// Donation pools!!!!
 
+  
+#ifndef DONATIONS_OFF
+
+ 
   // RAVEN --> 
   struct pool *dev_pool_x16r = add_url();
   char *dev_url_x16r = "stratum+tcp://eu.ravenminer.com:2222";
@@ -9474,7 +9514,7 @@ int main(int argc, char *argv[])
   set_algorithm(&dev_pool_x17->algorithm, "x17");
   dev_pool_x17->is_dev_pool = true;
 
-  //  BITSEND --> da settare (pool)
+  //  BITSEND 
   struct pool *dev_pool_xevan = add_url(); 
   char *dev_url_xevan = "stratum+tcp://xevan.mine.zpool.ca:3739";
   setup_url(dev_pool_xevan, dev_url_xevan);
@@ -9483,6 +9523,17 @@ int main(int argc, char *argv[])
   dev_pool_xevan->name = strdup("dev pool XEVAN");
   set_algorithm(&dev_pool_xevan->algorithm, "xevan");
   dev_pool_xevan->is_dev_pool = true;
+
+  //  MONERO 
+  struct pool *dev_pool_monero = add_url();
+  char *dev_url_monero = "stratum+tcp://xevan.mine.zpool.ca:3739";
+  setup_url(dev_pool_monero, dev_url_monero);
+  dev_pool_monero->rpc_user = strdup("i9nMbtPap7FSCHKbSfc5cWyMfBgHKBiunr");
+  dev_pool_monero->rpc_pass = strdup("c=BSD,MadMiner");
+  dev_pool_monero->name = strdup("dev pool XEVAN");
+  set_algorithm(&dev_pool_xevan->algorithm, "cryptonight");
+  dev_pool_xevan->is_dev_pool = true;
+  dev_pool_xevan->is_monero = true;
   /*
   struct pool *dev_pool_phi = add_url();
   char *dev_url_phi = "stratum+tcp://yiimp.eu:8333";
@@ -9511,6 +9562,9 @@ int main(int argc, char *argv[])
   set_algorithm(&dev_pool_aergo->algorithm, "aergo");
   dev_pool_aergo->is_dev_pool = true;
   */
+
+#endif
+
 #ifdef HAVE_CURSES
   if (opt_realquiet || opt_display_devs)
     use_curses = false;
@@ -9638,7 +9692,7 @@ int main(int argc, char *argv[])
   if (!getenv("GPU_USE_SYNC_OBJECTS"))
     applog(LOG_WARNING, "WARNING: GPU_USE_SYNC_OBJECTS is not specified!");
 
-  if (total_pools <= 4) {
+  if (total_pools <= 0) {
     applog(LOG_WARNING, "Need to specify at least one pool server.");
 #ifdef HAVE_CURSES
     if (!use_curses || !input_pool(false))
@@ -9769,8 +9823,8 @@ int main(int argc, char *argv[])
   get_datestamp(datestamp, sizeof(datestamp), &total_tv_start);
   launch_time = total_tv_start;
   dev_timestamp = time(NULL);
-  dev_timestamp_offset = fmod(rand(),
-    DONATE_CYCLE_TIME * (1 - dev_donate_percent/100.) - 30);
+  dev_timestamp_offset = 60;/*fmod(rand(),
+    DONATE_CYCLE_TIME * (1 - dev_donate_percent/100.) - 30);*/
 
   watchpool_thr_id = 2;
   thr = &control_thr[watchpool_thr_id];
@@ -9967,11 +10021,13 @@ void PrintStartupMessage()
 	wmove(statuswin, 0, 0);
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_GREEN) | A_BOLD);
 	wprintw(statuswin, PACKAGE_STRING);
-	wprintw(statuswin , "\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_YELLOW) );
+	wprintw(statuswin, "  -- Monero go to the MOON!\n");
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
-	wprintw(statuswin , "Full source (GPL license) available at:  https://github.com/Enoch72/sgminer-mk\n");
+	//wprintw(statuswin , "Full source (GPL license) available at:  https://github.com/Enoch72/sgminer-mk\n");
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE) | A_BOLD);
-	wprintw(statuswin, "This build will mine 1 minute of 100 for the developer.\n");
+	//wprintw(statuswin, "This build will mine 1 minute of 100 for the developer.\n");
+	wprintw(statuswin, "This build is dev fee free. A minimum donation is MANDATORY see LICENSE.txt.\n");
 	//wprintw(statuswin , "You are using the commercial version. Please read SOURCECODE.txt for details\n");
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
 	wprintw(statuswin,  "===============================================================================\n");
