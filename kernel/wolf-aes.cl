@@ -73,17 +73,27 @@ static const __constant uint AES0_C[256] =
 
 #define BYTE(x, y)	(amd_bfe((x), (y) << 3U, 8U))
 
-uint4 AES_Round(const __local uint *AES0, const __local uint *AES1, const __local uint *AES2, const __local uint *AES3, const uint4 X, const uint4 key)
+uint4 AES_Round(const __local uint *AES0, const __local uint *AES1, const __local uint *AES2, const __local uint *AES3, const uint4 X,  const uint4 key)
 {
 	uint4 Y;
 	Y.s0 = AES0[BYTE(X.s0, 0)] ^ AES1[BYTE(X.s1, 1)] ^ AES2[BYTE(X.s2, 2)] ^ AES3[BYTE(X.s3, 3)];
     Y.s1 = AES0[BYTE(X.s1, 0)] ^ AES1[BYTE(X.s2, 1)] ^ AES2[BYTE(X.s3, 2)] ^ AES3[BYTE(X.s0, 3)];
     Y.s2 = AES0[BYTE(X.s2, 0)] ^ AES1[BYTE(X.s3, 1)] ^ AES2[BYTE(X.s0, 2)] ^ AES3[BYTE(X.s1, 3)];
     Y.s3 = AES0[BYTE(X.s3, 0)] ^ AES1[BYTE(X.s0, 1)] ^ AES2[BYTE(X.s1, 2)] ^ AES3[BYTE(X.s2, 3)];
-    Y ^= key;
-    return(Y);
+    Y^=key;
+	return(Y);
 }                                                 
-        
+    
+
+uint4 AES_Round4(const __local uint4 *AES4, const uint4 X,  uint4 key)
+{
+	uint4 Y;
+	Y.s0 = AES4[BYTE(X.s0, 0)].s0 ^ AES4[BYTE(X.s1, 1)].s1 ^ AES4[BYTE(X.s2, 2)].s2 ^ AES4[BYTE(X.s3, 3)].s3;
+    Y.s1 = AES4[BYTE(X.s1, 0)].s0 ^ AES4[BYTE(X.s2, 1)].s1 ^ AES4[BYTE(X.s3, 2)].s2 ^ AES4[BYTE(X.s0, 3)].s3;
+    Y.s2 = AES4[BYTE(X.s2, 0)].s0 ^ AES4[BYTE(X.s3, 1)].s1 ^ AES4[BYTE(X.s0, 2)].s2 ^ AES4[BYTE(X.s1, 3)].s3;
+    Y.s3 = AES4[BYTE(X.s3, 0)].s0 ^ AES4[BYTE(X.s0, 1)].s1 ^ AES4[BYTE(X.s1, 2)].s2 ^ AES4[BYTE(X.s2, 3)].s3;
+    return(Y^key);
+}      
 		
 		
 		

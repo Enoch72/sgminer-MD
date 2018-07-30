@@ -30,6 +30,7 @@ struct profile {
   const char *worksize;
 };
 
+
 /* globals needed outside */
 extern char *cnfbuf;
 extern int fileconf_load;

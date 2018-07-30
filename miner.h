@@ -284,6 +284,9 @@ extern bool opt_remoteconf_usecache;
 extern bool opt_benchmark;
 extern uint8_t opt_benchmark_seq[17];
 
+extern bool opt_all_in_one;
+extern uint8_t opt_worksizes[64];
+
 
 enum alive {
   LIFE_WELL,

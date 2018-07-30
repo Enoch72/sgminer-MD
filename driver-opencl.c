@@ -1482,6 +1482,8 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
   }
   // if (algorithm.type == ALGO_ETHASH) read lock gpu->eth_dag.lock has to be released
   
+
+
   if(gpu->algorithm.type == ALGO_CRYPTONIGHT) {
     mutex_lock(&work->pool->XMRGlobalNonceLock);
     work->blk.nonce = work->pool->XMRGlobalNonce;
@@ -1494,7 +1496,7 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
     p_global_work_offset = &global_work_offset;
   
   if (gpu->algorithm.type == ALGO_CRYPTONIGHT) {
-    size_t GlobalThreads = *globalThreads, Nonce[2] = { (size_t)work->blk.nonce, 1}, gthreads[2] = { *globalThreads, 8 }, lthreads[2] = { *localThreads, 8 };
+    size_t GlobalThreads = *globalThreads, Nonce[3] = { (size_t)work->blk.nonce, 0,0}, gthreads[3] = { *globalThreads, 8,4 }, lthreads[3] = { *localThreads, 8,4 };
     size_t BranchBufCount[4] = { 0, 0, 0, 0 };
     
     for (int i = 0; i < 4; ++i) {
@@ -1514,6 +1516,9 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
 	}
 
     // Main CN P0
+	if (opt_worksizes[0])
+	    lthreads[0] = opt_worksizes[0];
+	
     status = clEnqueueNDRangeKernel(clState->commandQueue, clState->kernel, 2, Nonce, gthreads, lthreads, 0, NULL, NULL);
     
     if (status != CL_SUCCESS) {
@@ -1526,39 +1531,43 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
 		QueryPerformanceCounter(&p1);
 	}
     
-	// Main CN P1
-	status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[0], 1, p_global_work_offset, globalThreads, localThreads, 0, NULL, NULL);
-	/*
-	size_t search_local_size = 64;
-	size_t search_global_size = search_local_size / localThreads[0] * GlobalThreads;
-	applog(LOG_ERR, "Kernel enqueued dimensions offset: %d global %d  - local: %d", *p_global_work_offset,search_global_size, search_local_size);
-	status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[0], 1, p_global_work_offset, &search_global_size, &search_local_size, 0, NULL, NULL);
-	*/
-
-    if (status != CL_SUCCESS) {
-      applog(LOG_ERR, "Error %d while attempting to enqueue kernel 1.", status);
-      return -1;
-    }
 	
-	if (opt_benchmark) {
-		clFinish(clState->commandQueue);
-		QueryPerformanceCounter(&p2);
-	}
+	if (!opt_all_in_one)
+	{
+		// Main CN P1
 
-    // Main CN P2
-    status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[1], 2, Nonce, gthreads, lthreads, 0, NULL, NULL);
-    
-    if (status != CL_SUCCESS) {
-      applog(LOG_ERR, "Error %d while attempting to enqueue kernel 2.", status);
-      return -1;
-    }
+		if (opt_worksizes[1])
+			lthreads[0] = opt_worksizes[1];
+
+		status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[0], 1, p_global_work_offset, gthreads, lthreads, 0, NULL, NULL);
+
+		if (status != CL_SUCCESS) {
+			applog(LOG_ERR, "Error %d while attempting to enqueue kernel 1.", status);
+			return -1;
+		}
+
+		if (opt_benchmark) {
+			clFinish(clState->commandQueue);
+			QueryPerformanceCounter(&p2);
+		}
+
+		// Main CN P2
+		if (opt_worksizes[2])
+			lthreads[0] = opt_worksizes[2];
+
+		status = clEnqueueNDRangeKernel(clState->commandQueue, clState->extra_kernels[1], 2, Nonce, gthreads, lthreads, 0, NULL, NULL);
+
+		if (status != CL_SUCCESS) {
+			applog(LOG_ERR, "Error %d while attempting to enqueue kernel 2.", status);
+			return -1;
+		}
+
+	}
 
 	if (opt_benchmark) {
 		clFinish(clState->commandQueue);
 		QueryPerformanceCounter(&p3);
 	}
-
-	
     
     // Read BranchBuf counters
     
@@ -1607,7 +1616,7 @@ static int64_t opencl_scanhash(struct thr_info *thr, struct work *work,
 		p4.QuadPart = p0.QuadPart + p1.QuadPart + p2.QuadPart + p3.QuadPart;
 
 		
-		applog(LOG_NOTICE, "P0:%d  P1:%d   P2:%d   P3:%d  TOT:%d", (uint32_t)p0.QuadPart, (uint32_t)p1.QuadPart, (uint32_t)p2.QuadPart, (uint32_t)p3.QuadPart, (uint32_t)p4.QuadPart);
+		applog(LOG_NOTICE, "CN0:%d  CN1:%d   CN2:%d   CN4:%d  TOT:%d", (uint32_t)p0.QuadPart, (uint32_t)p1.QuadPart, (uint32_t)p2.QuadPart, (uint32_t)p3.QuadPart, (uint32_t)p4.QuadPart);
 	}
 
   }  // Cryptonight end bracket

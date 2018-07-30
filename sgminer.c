@@ -205,6 +205,9 @@ uint8_t opt_benchmark_seq[17] = {
   0x8, 0x9, 0xA, 0xB, 0xC, 0xD, 0xE, 0xF
 };
 
+bool opt_all_in_one = false;
+uint8_t opt_worksizes[64] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
 #define QUIET (opt_quiet || opt_realquiet)
 
 struct thr_info *control_thr;
@@ -1455,6 +1458,23 @@ char *set_benchmark_sequence(char *arg)
       opt_benchmark_seq[i] = arg[i] - '0';
   }
   opt_benchmark = true;
+  return NULL;
+}
+
+
+char *set_worksizes_sequence(char *arg)
+{
+	if (!(arg && arg[0]))
+		return "Invalid parameter for set worksize sequence";
+	uint i;
+	for (i = 0; i < strlen(arg); i++) {
+	
+		if ( !('0' <= arg[i] <= '8') )
+			return "Invalid worksize digit in sequence (valid values are :0--8)";
+		if (arg[i] > '0')
+			opt_worksizes[i] = pow(2.0, arg[i] - '0');
+	}
+	return NULL;
 }
 
 /* These options are available from config file or commandline */
@@ -1629,6 +1649,14 @@ struct opt_table opt_config_table[] = {
       "Hardcode the hash order in x16r/x16s"
       " for benchmarking purposes. Must be an uppercase hex string"
       "of length 16"),
+  // INtroduced with Monero SDK
+  OPT_WITH_ARG("--worksizes",
+	  set_worksizes_sequence, NULL, NULL,
+	  "Set the worksize sequence for multiple kernels."
+	  "Actually works only on Cryptonights algo"),
+ OPT_WITHOUT_ARG("--all-in-one-kernel",
+	  opt_set_bool, &opt_all_in_one,
+	  "Build and uses a single kenel instead of a sequence. Valid only for Cryptonights algo"),
 #ifdef HAVE_CURSES
   OPT_WITHOUT_ARG("--incognito",
       opt_set_bool, &opt_incognito,
@@ -9993,12 +10021,13 @@ void PrintStartupMessage()
 	wmove(statuswin, 0, 0);
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_GREEN) | A_BOLD);
 	wprintw(statuswin, PACKAGE_STRING);
-	wprintw(statuswin , "\n");
+	wattrset(statuswin, COLOR_PAIR(1 + COLOR_YELLOW) );
+	wprintw(statuswin, "  -- Monero go to the MOON!\n");
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
-	wprintw(statuswin , "Full source (GPL license) available at:  https://github.com/Enoch72/sgminer-mk\n");
+	//wprintw(statuswin , "Full source (GPL license) available at:  https://github.com/Enoch72/sgminer-mk\n");
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_WHITE) | A_BOLD);
 	//wprintw(statuswin, "This build will mine 1 minute of 100 for the developer.\n");
-	wprintw(statuswin, "This build is dev fee free. If you want to donate read the txt file.\n");
+	wprintw(statuswin, "This build is dev fee free. A minimum donation is MANDATORY see LICENSE.txt.\n");
 	//wprintw(statuswin , "You are using the commercial version. Please read SOURCECODE.txt for details\n");
 	wattrset(statuswin, COLOR_PAIR(1 + COLOR_CYAN) | A_BOLD);
 	wprintw(statuswin,  "===============================================================================\n");
