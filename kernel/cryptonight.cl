@@ -5,8 +5,9 @@
 #define sph_u64 ulong
 #define sph_s64 long
 
+
 #ifndef WORKSIZE
-#define WORKSIZE 8
+#define WORKSIZE 4
 #endif
 
 #include "wolf-aes.cl"
@@ -21,6 +22,7 @@
 #define VARIANT0_INIT()
 
 #define VARIANT1_PARAMS , const uint tweak1
+
 #define VARIANT1_1(p) \
   do \
   { \
@@ -32,11 +34,35 @@
 #define VARIANT1_2(p) \
     (p) ^= tweak1_2
 
+
 #define VARIANT1_INIT() \
     uint2 tweak1_2; \
     tweak1_2.s0 = tweak1; \
     tweak1_2.s1 = get_global_id(0); \
     tweak1_2 ^= as_uint2(states[24]);
+
+	
+
+#ifndef GLOBAL_SIZE  
+#define GLOBAL_SIZE get_global_size(0)
+#endif
+	
+// #define MONERO_CHUNK 4
+
+
+
+#ifndef MONERO_CHUNK	
+#ifdef ALL_IN_ONE
+#define IDX(x)	( (x) * (GLOBAL_SIZE) )
+#else
+#define IDX(x)	( (x) * (GLOBAL_SIZE) )
+#endif
+#define OFX(x)  ( (x) )
+#else
+#define IDX(x)	( (x) % MONERO_CHUNK +  ( (x) / MONERO_CHUNK) * GLOBAL_SIZE )
+#define OFX(x)  (  (x) * MONERO_CHUNK )
+#endif
+
 
 static const __constant ulong keccakf_rndc[24] = 
 {
@@ -71,53 +97,6 @@ static const __constant uchar sbox[256] =
 };
 
 
-void keccakf1600(ulong *s)
-{
-    for(int i = 0; i < 24; ++i) 
-    {
-		ulong bc[5], tmp1, tmp2;
-        bc[0] = s[0] ^ s[5] ^ s[10] ^ s[15] ^ s[20] ^ rotate(s[2] ^ s[7] ^ s[12] ^ s[17] ^ s[22], 1UL);
-        bc[1] = s[1] ^ s[6] ^ s[11] ^ s[16] ^ s[21] ^ rotate(s[3] ^ s[8] ^ s[13] ^ s[18] ^ s[23], 1UL);
-        bc[2] = s[2] ^ s[7] ^ s[12] ^ s[17] ^ s[22] ^ rotate(s[4] ^ s[9] ^ s[14] ^ s[19] ^ s[24], 1UL);
-        bc[3] = s[3] ^ s[8] ^ s[13] ^ s[18] ^ s[23] ^ rotate(s[0] ^ s[5] ^ s[10] ^ s[15] ^ s[20], 1UL);
-        bc[4] = s[4] ^ s[9] ^ s[14] ^ s[19] ^ s[24] ^ rotate(s[1] ^ s[6] ^ s[11] ^ s[16] ^ s[21], 1UL);
-        
-        tmp1 = s[1] ^ bc[0];
-        
-        s[0] ^= bc[4];
-        s[1] = rotate(s[6] ^ bc[0], 44UL);
-        s[6] = rotate(s[9] ^ bc[3], 20UL);
-        s[9] = rotate(s[22] ^ bc[1], 61UL);
-        s[22] = rotate(s[14] ^ bc[3], 39UL);
-        s[14] = rotate(s[20] ^ bc[4], 18UL);
-        s[20] = rotate(s[2] ^ bc[1], 62UL);
-        s[2] = rotate(s[12] ^ bc[1], 43UL);
-        s[12] = rotate(s[13] ^ bc[2], 25UL);
-        s[13] = rotate(s[19] ^ bc[3], 8UL);
-        s[19] = rotate(s[23] ^ bc[2], 56UL);
-        s[23] = rotate(s[15] ^ bc[4], 41UL);
-        s[15] = rotate(s[4] ^ bc[3], 27UL);
-        s[4] = rotate(s[24] ^ bc[3], 14UL);
-        s[24] = rotate(s[21] ^ bc[0], 2UL);
-        s[21] = rotate(s[8] ^ bc[2], 55UL);
-        s[8] = rotate(s[16] ^ bc[0], 35UL);
-        s[16] = rotate(s[5] ^ bc[4], 36UL);
-        s[5] = rotate(s[3] ^ bc[2], 28UL);
-        s[3] = rotate(s[18] ^ bc[2], 21UL);
-        s[18] = rotate(s[17] ^ bc[1], 15UL);
-        s[17] = rotate(s[11] ^ bc[0], 10UL);
-        s[11] = rotate(s[7] ^ bc[1], 6UL);
-        s[7] = rotate(s[10] ^ bc[4], 3UL);
-        s[10] = rotate(tmp1, 1UL);
-        
-        tmp1 = s[0]; tmp2 = s[1]; s[0] = bitselect(s[0] ^ s[2], s[0], s[1]); s[1] = bitselect(s[1] ^ s[3], s[1], s[2]); s[2] = bitselect(s[2] ^ s[4], s[2], s[3]); s[3] = bitselect(s[3] ^ tmp1, s[3], s[4]); s[4] = bitselect(s[4] ^ tmp2, s[4], tmp1);
-        tmp1 = s[5]; tmp2 = s[6]; s[5] = bitselect(s[5] ^ s[7], s[5], s[6]); s[6] = bitselect(s[6] ^ s[8], s[6], s[7]); s[7] = bitselect(s[7] ^ s[9], s[7], s[8]); s[8] = bitselect(s[8] ^ tmp1, s[8], s[9]); s[9] = bitselect(s[9] ^ tmp2, s[9], tmp1);
-        tmp1 = s[10]; tmp2 = s[11]; s[10] = bitselect(s[10] ^ s[12], s[10], s[11]); s[11] = bitselect(s[11] ^ s[13], s[11], s[12]); s[12] = bitselect(s[12] ^ s[14], s[12], s[13]); s[13] = bitselect(s[13] ^ tmp1, s[13], s[14]); s[14] = bitselect(s[14] ^ tmp2, s[14], tmp1);
-        tmp1 = s[15]; tmp2 = s[16]; s[15] = bitselect(s[15] ^ s[17], s[15], s[16]); s[16] = bitselect(s[16] ^ s[18], s[16], s[17]); s[17] = bitselect(s[17] ^ s[19], s[17], s[18]); s[18] = bitselect(s[18] ^ tmp1, s[18], s[19]); s[19] = bitselect(s[19] ^ tmp2, s[19], tmp1);
-        tmp1 = s[20]; tmp2 = s[21]; s[20] = bitselect(s[20] ^ s[22], s[20], s[21]); s[21] = bitselect(s[21] ^ s[23], s[21], s[22]); s[22] = bitselect(s[22] ^ s[24], s[22], s[23]); s[23] = bitselect(s[23] ^ tmp1, s[23], s[24]); s[24] = bitselect(s[24] ^ tmp2, s[24], tmp1);
-        s[0] ^= keccakf_rndc[i];
-    }
-}
 
 static const __constant uint keccakf_rotc[24] = 
 {
@@ -134,7 +113,78 @@ static const __constant uint keccakf_piln[24] =
 
 void keccakf1600_2(ulong *st)
 {
-    int i, round;
+    ushort i, round;
+    ulong t, bc[5];
+
+    #pragma unroll 1
+    for(round = 0; round < 24; ++round)
+    {
+        // Theta
+
+        bc[0] = st[0] ^ st[5] ^ st[10] ^ st[15] ^ st[20] ^ rotate(st[2] ^ st[7] ^ st[12] ^ st[17] ^ st[22], 1UL);
+        bc[1] = st[1] ^ st[6] ^ st[11] ^ st[16] ^ st[21] ^ rotate(st[3] ^ st[8] ^ st[13] ^ st[18] ^ st[23], 1UL);
+        bc[2] = st[2] ^ st[7] ^ st[12] ^ st[17] ^ st[22] ^ rotate(st[4] ^ st[9] ^ st[14] ^ st[19] ^ st[24], 1UL);
+        bc[3] = st[3] ^ st[8] ^ st[13] ^ st[18] ^ st[23] ^ rotate(st[0] ^ st[5] ^ st[10] ^ st[15] ^ st[20], 1UL);
+        bc[4] = st[4] ^ st[9] ^ st[14] ^ st[19] ^ st[24] ^ rotate(st[1] ^ st[6] ^ st[11] ^ st[16] ^ st[21], 1UL);
+
+        st[0] ^= bc[4];
+        st[5] ^= bc[4];
+        st[10] ^= bc[4];
+        st[15] ^= bc[4];
+        st[20] ^= bc[4];
+
+        st[1] ^= bc[0];
+        st[6] ^= bc[0];
+        st[11] ^= bc[0];
+        st[16] ^= bc[0];
+        st[21] ^= bc[0];
+
+        st[2] ^= bc[1];
+        st[7] ^= bc[1];
+        st[12] ^= bc[1];
+        st[17] ^= bc[1];
+        st[22] ^= bc[1];
+
+        st[3] ^= bc[2];
+        st[8] ^= bc[2];
+        st[13] ^= bc[2];
+        st[18] ^= bc[2];
+        st[23] ^= bc[2];
+
+        st[4] ^= bc[3];
+        st[9] ^= bc[3];
+        st[14] ^= bc[3];
+        st[19] ^= bc[3];
+        st[24] ^= bc[3];
+		
+        // Rho Pi
+        t = st[1];
+        #pragma unroll
+        for (i = 0; i < 24; ++i) {
+            bc[0] = st[keccakf_piln[i]];
+            st[keccakf_piln[i]] = rotate(t, (ulong)keccakf_rotc[i]);
+            t = bc[0];
+        }
+        
+        #pragma unroll
+        for(int i = 0; i < 25; i += 5) {
+            ulong tmp1 = st[i], tmp2 = st[i + 1];
+
+            st[i] = bitselect(st[i] ^ st[i + 2], st[i], st[i + 1]);
+            st[i + 1] = bitselect(st[i + 1] ^ st[i + 3], st[i + 1], st[i + 2]);
+            st[i + 2] = bitselect(st[i + 2] ^ st[i + 4], st[i + 2], st[i + 3]);
+            st[i + 3] = bitselect(st[i + 3] ^ tmp1, st[i + 3], st[i + 4]);
+            st[i + 4] = bitselect(st[i + 4] ^ tmp2, st[i + 4], tmp1);
+        }
+        
+        //  Iota
+        st[0] ^= keccakf_rndc[round];
+    }
+}
+
+void keccakf1600_2_global(__global ulong *st)
+{
+    ushort i, round;
     ulong t, bc[5];
 
     #pragma unroll 1
@@ -214,11 +264,11 @@ static const __constant uchar rcon[8] = { 0x8d, 0x01, 0x02, 0x04, 0x08, 0x10, 0x
 
 void AESExpandKey256(uint *keybuf)
 {
-	//#pragma unroll 4
-	for(uint c = 8, i = 1; c < 60; ++c)
+	#pragma unroll 4
+	for(ushort c = 8, i = 1; c < 40; ++c)
 	{
 		// For 256-bit keys, an sbox permutation is done every other 4th uint generated, AND every 8th
-		uint t = ((!(c & 7)) || ((c & 7) == 4)) ? SubWord(keybuf[c - 1]) : keybuf[c - 1];
+		uint t = (!(c & 3)) ? SubWord(keybuf[c - 1]) : keybuf[c - 1];
 		
 		// If the uint we're generating has an index that is a multiple of 8, rotate and XOR with the round constant,
 		// then XOR this with previously generated uint. If it's 4 after a multiple of 8, only the sbox permutation
@@ -227,20 +277,20 @@ void AESExpandKey256(uint *keybuf)
 	}
 }
 
-#define IDX(x)	((x) * (688U))
 
-__attribute__((reqd_work_group_size(WORKSIZE, 8, 1)))
-__kernel void search(__global ulong *input, uint InputLen, __global uint4 *Scratchpad, __global ulong *states)
+
+
+#ifndef ALL_IN_ONE
+
+__kernel void search(__global ulong const  *input, uint InputLen, __global  uint4 * restrict Scratchpad, __global ulong * restrict  states)
 {
 	ulong State[25];
-	uint ExpandedKey1[64];
 	__local uint AES0[256], AES1[256], AES2[256], AES3[256];
 	uint4 text;
-	
 	states += (25 * (get_global_id(0) - get_global_offset(0)));
-	Scratchpad += ((get_global_id(0) - get_global_offset(0)));
+	Scratchpad += OFX((get_global_id(0) - get_global_offset(0)));
 	
-	for(int i = get_local_id(0); i < 256; i += WORKSIZE)
+	for(ushort i = get_local_id(0); i < 256; i += get_local_size(0))
 	{
 		const uint tmp = AES0_C[i];
 		AES0[i] = tmp;
@@ -248,6 +298,8 @@ __kernel void search(__global ulong *input, uint InputLen, __global uint4 *Scrat
 		AES2[i] = rotate(tmp, 16U);
 		AES3[i] = rotate(tmp, 24U);
 	}
+    
+	for(int i = 0; i < 25; ++i) State[i] = 0x00UL;
 	
 	((ulong8 *)State)[0] = vload8(0, input);
 	State[8] = input[8];
@@ -257,54 +309,58 @@ __kernel void search(__global ulong *input, uint InputLen, __global uint4 *Scrat
 	((uint *)State)[9] |= ((get_global_id(0)) & 0xFF) << 24;
 	((uint *)State)[10] &= 0xFF000000U;
 	((uint *)State)[10] |= ((get_global_id(0) >> 8));
-	State[9] = (input[9] & 0x00000000FFFFFFFFUL); //| 0x0000000100000000UL;
+	State[9] = (input[9] & 0x00000000FFFFFFFFUL); 
 	
 	for(int i = 76; i < InputLen; ++i) ((uchar *)State)[i] = ((__global uchar *)input)[i];
 	
 	((uchar *)State)[InputLen] = 0x01;
-	
-	for(int i = InputLen + 1; i < 128; ++i) ((uchar *)State)[i] = 0x00;
-	
-	for(int i = 16; i < 25; ++i) State[i] = 0x00UL;
-	
+
 	// Last bit of padding
 	State[16] = 0x8000000000000000UL;
-	
+		
 	keccakf1600_2(State);
 	
 	mem_fence(CLK_GLOBAL_MEM_FENCE);
 
 	#pragma unroll
-	for(int i = 0; i < 25; ++i) states[i] = State[i];
+	for(ushort i = 0; i < 25; ++i) states[i] = State[i];
 	
-	text = vload4(get_local_id(1) + 4, (__global uint *)(states));
+	//text = vload4(get_local_id(1) + 4, (__global uint *)(states));
+	text.s0 = ((uint *)State)[(get_local_id(1) + 4) * 4];
+	text.s1 = ((uint *)State)[(get_local_id(1) + 4) * 4+1];
+	text.s2 = ((uint *)State)[(get_local_id(1) + 4) * 4+2];
+	text.s3 = ((uint *)State)[(get_local_id(1) + 4) * 4+3];
 	
-	#pragma unroll
-	for(int i = 0; i < 4; ++i) ((ulong *)ExpandedKey1)[i] = states[i];
-	
-	AESExpandKey256(ExpandedKey1);
+	AESExpandKey256( ((uint *)State) );
 	
 	mem_fence(CLK_LOCAL_MEM_FENCE);
 	
+	Scratchpad+=IDX(get_local_id(1));
+	uint step = IDX(8);
 	#pragma unroll 2
 	for(int i = 0; i < 0x4000; ++i)
 	{
-		#pragma unroll
-		for(int j = 0; j < 10; ++j)
-			text = AES_Round(AES0, AES1, AES2, AES3, text, ((uint4 *)ExpandedKey1)[j]);
 		
-		Scratchpad[IDX((i << 3) + get_local_id(1))] = text;
+		for(ushort j = 0; j < 10; ++j)
+			text = AES_Round(AES0,  AES1, AES2, AES3,text, ((uint4 *)State)[j]);
+		 *Scratchpad = text;
+		 Scratchpad+=step;
+		
 	}
+	
 }
-
+	
+#endif
+	
+	
 #define SEARCH1(VAR) \
-__attribute__((reqd_work_group_size(WORKSIZE, 1, 1))) \
-__kernel void search1_var##VAR(__global uint4 *Scratchpad, __global ulong *states VARIANT##VAR##_PARAMS) \
+__attribute__((reqd_work_group_size(WORKSIZE, 8, 1))) \
+__kernel void search1_var##VAR(__global  uint4 * restrict Scratchpad, __global ulong * restrict states VARIANT##VAR##_PARAMS) \
 { \
 	uint4 a, b; \
 	__local uint AES0[256], AES1[256], AES2[256], AES3[256]; \
 	\
-	Scratchpad += ((get_global_id(0) - get_global_offset(0))); \
+	Scratchpad += OFX((get_global_id(0) - get_global_offset(0))); \
 	states += (25 * (get_global_id(0) - get_global_offset(0))); \
 	\
 	VARIANT##VAR##_INIT(); \
@@ -325,53 +381,61 @@ __kernel void search1_var##VAR(__global uint4 *Scratchpad, __global ulong *state
 	\
 	uint4 b_x = b; \
 	\
+	uint4  c0,c;\
+	bool equal;\
+	c = Scratchpad[IDX((a.s0 & 0x1FFFF0) >> 4)]; \
 	mem_fence(CLK_LOCAL_MEM_FENCE); \
-	\
-	_Pragma("unroll 8") \
+	_Pragma("unroll 2") \
 	for (int i = 0; i < 0x80000; ++i) \
 	{ \
-		uint4 c; \
-		\
-		c = Scratchpad[IDX((as_ulong(a.s01) & 0x1FFFF0) >> 4)]; \
-		c = AES_Round(AES0, AES1, AES2, AES3, c, a); \
-		\
+		uint4 tmp;\
+		c0 = AES_Round(AES0,AES1,AES2,AES3,c,a);\
+		equal  = ( (c0.s0 ^ a.s0) & 0x1FFFF0 ) == 0 ;\
+		tmp    = Scratchpad[IDX((c0.s0 & 0x1FFFF0) >> 4)]; \
+		c  = c0;\
 		b_x ^= c; \
 		VARIANT##VAR##_1(b_x); \
 		\
-		Scratchpad[IDX((as_ulong(a.s01) & 0x1FFFF0) >> 4)] = b_x; \
+		Scratchpad[IDX((a.s0 & 0x1FFFF0) >> 4)] = b_x; \
+		if (equal)\
+		 tmp = b_x;\
 		\
-		uint4 tmp; \
-		tmp = Scratchpad[IDX((as_ulong(c.s01) & 0x1FFFF0) >> 4)]; \
-		\
-		a.s23 = as_uint2(as_ulong(a.s23) +        as_ulong(c.s01) * as_ulong(tmp.s01)); \
 		a.s01 = as_uint2(as_ulong(a.s01) + mul_hi(as_ulong(c.s01),  as_ulong(tmp.s01))); \
+		uint a_s0_xor_tmp = a.s0 ^ tmp.s0;\
+		equal = ( (c.s0 ^ a_s0_xor_tmp) & 0x1FFFF0) == 0 ;\
+		if ( !equal) c0 = Scratchpad[IDX((a_s0_xor_tmp & 0x1FFFF0) >> 4)]; \
 		\
-		VARIANT##VAR##_2(a.s23); \
-		Scratchpad[IDX((as_ulong(c.s01) & 0x1FFFF0) >> 4)] = a; \
-		VARIANT##VAR##_2(a.s23); \
-		\
-		a ^= tmp; \
-		\
-		b_x = c; \
+		 a.s23 = as_uint2(as_ulong(a.s23) +        as_ulong(c.s01) * as_ulong(tmp.s01)); \
+		 VARIANT##VAR##_2(a.s23); \
+		 Scratchpad[IDX((c.s0 & 0x1FFFF0) >> 4)] = a; \
+		 uint4 olda = a;\
+		 VARIANT##VAR##_2(a.s23); \
+		 a.s0 = a_s0_xor_tmp; a.s1^= tmp.s1; a.s23^= tmp.s23;\
+		 b_x = c; \
+		 c = equal ? olda : c0;\
 	} \
 }
+
+
+
 
 #define search1_var0 search1
 SEARCH1(0)
 SEARCH1(1)
 
-__attribute__((reqd_work_group_size(WORKSIZE, 8, 1)))
-__kernel void search2(__global uint4 *Scratchpad, __global ulong *states, __global uint *Branch0, __global uint *Branch1, __global uint *Branch2, __global uint *Branch3)
+
+//__attribute__((reqd_work_group_size(WORKSIZE, 8, 1)))
+__kernel void search2(__global  uint4 * restrict Scratchpad, __global  ulong * restrict states, 
+                      __global uint * restrict Branch0, __global uint * restrict Branch1 , __global uint * restrict Branch2, __global uint * restrict Branch3)
 {
 	__local uint AES0[256], AES1[256], AES2[256], AES3[256];
-	uint ExpandedKey2[64];
+	uint ExpandedKey2[40];
 	ulong State[25];
 	uint4 text;
-	
-	Scratchpad += ((get_global_id(0) - get_global_offset(0)));
+	Scratchpad += OFX((get_global_id(0) - get_global_offset(0)));
 	states += (25 * (get_global_id(0) - get_global_offset(0)));
 	
-	for(int i = get_local_id(0); i < 256; i += WORKSIZE)
+	for(int i = get_local_id(0)+get_local_id(1); i < 256; i += get_local_size(0)*get_local_size(1))
 	{
 		const uint tmp = AES0_C[i];
 		AES0[i] = tmp;
@@ -380,31 +444,33 @@ __kernel void search2(__global uint4 *Scratchpad, __global ulong *states, __glob
 		AES3[i] = rotate(tmp, 24U);
 	}
 	
-	#if defined(__Tahiti__) || defined(__Pitcairn__)
-	
-	for(int i = 0; i < 4; ++i) ((ulong *)ExpandedKey2)[i] = states[i + 4];
-	text = vload4(get_local_id(1) + 4, (__global uint *)states);
-	
-	#else
-	
+
 	text = vload4(get_local_id(1) + 4, (__global uint *)states);
 	((uint8 *)ExpandedKey2)[0] = vload8(1, (__global uint *)states);
 	
-	#endif
 	
 	AESExpandKey256(ExpandedKey2);
 	
 	barrier(CLK_LOCAL_MEM_FENCE);
+	uint end = get_local_id(1);
 	
-	#pragma unroll 2
-	for(int i = 0; i < 0x4000; ++i)
+	Scratchpad+=IDX(get_local_id(1));
+	uint step = IDX(8);
+	//#pragma unroll 1
+	uint i= 0x4000;
+	uint4 prefetchedtext = *Scratchpad, prefetchedtext2;
+	// **X** The code is arranged in order to 'Prefetch' or read data from scratchpad soon as possible
+	while (i)
 	{		
-		text ^= Scratchpad[IDX((i << 3) + get_local_id(1))];
-		
+		text^= prefetchedtext;
+		Scratchpad+=step;
+		if (states) // 
+		prefetchedtext = *Scratchpad;
 		#pragma unroll
 		for(int j = 0; j < 10; ++j)
-			text = AES_Round(AES0, AES1, AES2, AES3, text, ((uint4 *)ExpandedKey2)[j]);
-	}
+			text = AES_Round(AES0,  AES1, AES2, AES3,text, ((uint4 *)ExpandedKey2)[j]);
+		i--; 
+    }
 	
 	vstore2(as_ulong2(text), get_local_id(1) + 4, states);
 	
@@ -435,6 +501,8 @@ __kernel void search2(__global uint4 *Scratchpad, __global ulong *states, __glob
 		}
 	}
 }
+
+
 
 
 #define VSWAP8(x)	(((x) >> 56) | (((x) >> 40) & 0x000000000000FF00UL) | (((x) >> 24) & 0x0000000000FF0000UL) \
@@ -488,7 +556,6 @@ __kernel void search6(__global ulong *states, __global uint *BranchBuf, __global
 	
 	p = Skein512Block(p, h, h8, t);
 	
-	//vstore8(p, 0, output);
 	
 	if(as_uint16(p).s7 <= Target) output[atomic_inc(output + 0xFF)] = BranchBuf[idx] + get_global_offset(0);
 }
@@ -548,11 +615,6 @@ __kernel void search5(__global ulong *states, __global uint *BranchBuf, __global
 		h7h ^= input[6];
 		h7l ^= input[7];
 	}
-	
-	//output[0] = h6h;
-	//output[1] = h6l;
-	//output[2] = h7h;
-	//output[3] = h7l;
 	
 	if(as_uint2(h7l).s1 <= Target) output[atomic_inc(output + 0xFF)] = BranchBuf[idx] + get_global_offset(0);
 }
@@ -676,3 +738,4 @@ __kernel void search4(__global ulong *states, __global uint *BranchBuf, __global
 	//for(int i = 0; i < 4; ++i) output[i] = State[i + 4];
 	if(as_uint2(State[7]).s1 <= Target) output[atomic_inc(output + 0xFF)] = BranchBuf[idx] + get_global_offset(0);
 }
+
