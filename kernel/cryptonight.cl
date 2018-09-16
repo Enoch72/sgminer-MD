@@ -1,3 +1,6 @@
+
+/* Optimizations (c) 2018 by MadKernel */
+
 #pragma OPENCL EXTENSION cl_amd_media_ops2 : enable
 
 #define sph_u32 uint
